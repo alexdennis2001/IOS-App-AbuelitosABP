@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCEF28CABDF500193CCE /* LoginView.swift */; };
+		1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCF428CC35C300193CCE /* RegistroView.swift */; };
+		1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */; };
+		1B1AFCF928CE3A0300193CCE /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCF828CE3A0300193CCE /* HomeView.swift */; };
+		1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCFA28CEA43B00193CCE /* MenuView.swift */; };
+		1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */; };
+		1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCFE28CFB61600193CCE /* AccountView.swift */; };
+		1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */; };
+		1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */; };
 		1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */; };
 		1B21A59028CA59210060B598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58F28CA59210060B598 /* ContentView.swift */; };
 		1B21A59228CA59240060B598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21A59128CA59240060B598 /* Assets.xcassets */; };
@@ -16,6 +25,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B1AFCEF28CABDF500193CCE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		1B1AFCF428CC35C300193CCE /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
+		1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarContrasenaView.swift; sourceTree = "<group>"; };
+		1B1AFCF828CE3A0300193CCE /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		1B1AFCFA28CEA43B00193CCE /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebasView.swift; sourceTree = "<group>"; };
+		1B1AFCFE28CFB61600193CCE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFisicaView.swift; sourceTree = "<group>"; };
+		1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer-ViewModel.swift"; sourceTree = "<group>"; };
 		1B21A58A28CA59210060B598 /* AbuelitosABP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbuelitosABP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbuelitosABPApp.swift; sourceTree = "<group>"; };
 		1B21A58F28CA59210060B598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -36,6 +54,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B1AFCEE28CABD8F00193CCE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		1B21A58128CA59210060B598 = {
 			isa = PBXGroup;
 			children = (
@@ -55,8 +80,18 @@
 		1B21A58C28CA59210060B598 /* AbuelitosABP */ = {
 			isa = PBXGroup;
 			children = (
+				1B1AFCEE28CABD8F00193CCE /* Models */,
 				1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */,
+				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
+				1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */,
+				1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */,
+				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
+				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
+				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
 				1B21A58F28CA59210060B598 /* ContentView.swift */,
+				1B1AFCEF28CABDF500193CCE /* LoginView.swift */,
+				1B1AFCF428CC35C300193CCE /* RegistroView.swift */,
+				1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */,
 				1B21A59128CA59240060B598 /* Assets.xcassets */,
 				1B21A59628CA59240060B598 /* Persistence.swift */,
 				1B21A59828CA59240060B598 /* AbuelitosABP.xcdatamodeld */,
@@ -144,8 +179,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
+				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
+				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
+				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
 				1B21A59028CA59210060B598 /* ContentView.swift in Sources */,
+				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
+				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
+				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
+				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
+				1B1AFCF928CE3A0300193CCE /* HomeView.swift in Sources */,
+				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +325,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -310,6 +355,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
