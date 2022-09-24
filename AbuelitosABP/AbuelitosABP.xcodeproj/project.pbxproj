@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B07624928DE129400E6425C /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07624828DE129400E6425C /* Page.swift */; };
+		1B07624D28DE13D900E6425C /* LoginControllerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07624C28DE13D900E6425C /* LoginControllerView.swift */; };
+		1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07625228DE1FA100E6425C /* ActCognitivaView.swift */; };
+		1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07625428DEDA1800E6425C /* ActSocialView.swift */; };
+		1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B07625928DF9AE200E6425C /* PruebaView.swift */; };
 		1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCEF28CABDF500193CCE /* LoginView.swift */; };
 		1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCF428CC35C300193CCE /* RegistroView.swift */; };
 		1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */; };
@@ -25,6 +30,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B07624828DE129400E6425C /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		1B07624C28DE13D900E6425C /* LoginControllerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginControllerView.swift; sourceTree = "<group>"; };
+		1B07625228DE1FA100E6425C /* ActCognitivaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActCognitivaView.swift; sourceTree = "<group>"; };
+		1B07625428DEDA1800E6425C /* ActSocialView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActSocialView.swift; sourceTree = "<group>"; };
+		1B07625928DF9AE200E6425C /* PruebaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaView.swift; sourceTree = "<group>"; };
 		1B1AFCEF28CABDF500193CCE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1B1AFCF428CC35C300193CCE /* RegistroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegistroView.swift; sourceTree = "<group>"; };
 		1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarContrasenaView.swift; sourceTree = "<group>"; };
@@ -54,9 +64,51 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B07624F28DE1C6F00E6425C /* Activities */ = {
+			isa = PBXGroup;
+			children = (
+				1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */,
+				1B07625228DE1FA100E6425C /* ActCognitivaView.swift */,
+				1B07625428DEDA1800E6425C /* ActSocialView.swift */,
+			);
+			path = Activities;
+			sourceTree = "<group>";
+		};
+		1B07625028DE1CF600E6425C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1B07624C28DE13D900E6425C /* LoginControllerView.swift */,
+				1B1AFCEF28CABDF500193CCE /* LoginView.swift */,
+				1B1AFCF428CC35C300193CCE /* RegistroView.swift */,
+				1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1B07625128DE1DEA00E6425C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
+				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
+				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
+				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1B07625628DF9A6E00E6425C /* Pruebas */ = {
+			isa = PBXGroup;
+			children = (
+				1B07625928DF9AE200E6425C /* PruebaView.swift */,
+			);
+			path = Pruebas;
+			sourceTree = "<group>";
+		};
 		1B1AFCEE28CABD8F00193CCE /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				1B07624828DE129400E6425C /* Page.swift */,
+				1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -80,18 +132,13 @@
 		1B21A58C28CA59210060B598 /* AbuelitosABP */ = {
 			isa = PBXGroup;
 			children = (
-				1B1AFCEE28CABD8F00193CCE /* Models */,
 				1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */,
-				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
-				1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */,
-				1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */,
-				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
-				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
-				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
+				1B1AFCEE28CABD8F00193CCE /* Models */,
+				1B07625028DE1CF600E6425C /* Login */,
+				1B07625128DE1DEA00E6425C /* Home */,
+				1B07624F28DE1C6F00E6425C /* Activities */,
+				1B07625628DF9A6E00E6425C /* Pruebas */,
 				1B21A58F28CA59210060B598 /* ContentView.swift */,
-				1B1AFCEF28CABDF500193CCE /* LoginView.swift */,
-				1B1AFCF428CC35C300193CCE /* RegistroView.swift */,
-				1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */,
 				1B21A59128CA59240060B598 /* Assets.xcassets */,
 				1B21A59628CA59240060B598 /* Persistence.swift */,
 				1B21A59828CA59240060B598 /* AbuelitosABP.xcdatamodeld */,
@@ -180,15 +227,20 @@
 			files = (
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
 				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
+				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
+				1B07624D28DE13D900E6425C /* LoginControllerView.swift in Sources */,
+				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
 				1B21A59028CA59210060B598 /* ContentView.swift in Sources */,
+				1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */,
 				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
 				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
 				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
 				1B1AFCF928CE3A0300193CCE /* HomeView.swift in Sources */,
+				1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */,
 				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
 			);
@@ -325,6 +377,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -355,6 +408,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";

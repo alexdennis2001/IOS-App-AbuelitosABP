@@ -15,7 +15,7 @@ struct AbuelitosABPApp: App {
         WindowGroup {
 //            ContentView()
 //                .environment(\.managedObjectContext, persistenceController.container.viewContext)
-            MenuView()
+            LoginControllerView()
         }
     }
 }

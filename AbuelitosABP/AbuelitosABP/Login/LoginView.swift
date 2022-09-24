@@ -12,6 +12,8 @@ struct LoginView: View {
     @State private var cel: String = ""
     @State private var password: String = ""
     
+    @AppStorage("Page") var currentPage: Page?
+    
     var body: some View {
         
         NavigationView {
@@ -75,7 +77,7 @@ struct LoginView: View {
                     
                     VStack{
                         Button {
-                            
+                            currentPage = .menu
                         } label: {
                             Text("Iniciar Sesión")
                                 .bold()

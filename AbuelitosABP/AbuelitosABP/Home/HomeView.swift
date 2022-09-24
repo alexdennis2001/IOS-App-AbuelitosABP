@@ -85,7 +85,7 @@ struct HomeView: View {
                             )
                     }
                     
-                    NavigationLink(destination: ActFisicaView()){
+                    NavigationLink(destination: ActCognitivaView()){
                         Image("book")
                             .resizable()
                             .scaledToFill()
@@ -109,7 +109,7 @@ struct HomeView: View {
                     
                     
                     
-                    NavigationLink(destination: ActFisicaView()){
+                    NavigationLink(destination: ActSocialView()){
                         Image("socializing")
                             .resizable()
                             .scaledToFill()
