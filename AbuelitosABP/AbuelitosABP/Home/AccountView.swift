@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct AccountView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
     
     var body: some View {
         ZStack(alignment: .top) {
-            Color(azulAbuelos)
+            Color("BackgroundColor")
                 .ignoresSafeArea()
             VStack{
                 Capsule()

@@ -7,16 +7,29 @@
 
 import SwiftUI
 
+struct Card: ViewModifier{
+    let backgroundColor: Color
+    func body(content: Content) -> some View {
+        content
+            .foregroundColor(.black)
+            .font(.system(size: 20, weight: .semibold))
+            .frame(width: 320, height: 100)
+            .background(backgroundColor)
+            .cornerRadius(30)
+    }
+}
+
+extension View {
+    func card(backgroundColor: Color = Color("AmarilloPrueba")) -> some View {
+        modifier(Card(backgroundColor: backgroundColor))
+    }
+}
+
 struct PruebasView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
-    let rojoPrueba = UIColor(red: 0.97, green: 0.61, blue: 0.63, alpha: 1.00)
-    let verdePrueba = UIColor(red: 0.43, green: 0.85, blue: 0.49, alpha: 1.00)
-    let amarilloPrueba = UIColor(red: 0.99, green: 0.96, blue: 0.60, alpha: 1.00)
-    
     var body: some View {
         NavigationView{
             ZStack(alignment: .center) {
-                Color(azulAbuelos)
+                Color("BackgroundColor")
                     .ignoresSafeArea()
                 VStack(alignment: .leading){
                     Image("logo_abuelitos")
@@ -37,20 +50,12 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView()) {
                                 Text("TIMED UP AND GO")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(verdePrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("VerdePrueba"))
                             }
                             
                             NavigationLink(destination: PruebaView()) {
                                 Text("MINI MENTAL STATE EXAMINATION DE FOLSTEIN")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
                         .frame(width: 380, height: 300)
@@ -65,20 +70,12 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView()) {
                                 Text("ÍNDICE DE KATZ")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(rojoPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("RojoPrueba"))
                             }
                             
                             NavigationLink(destination: PruebaView()) {
                                 Text("ÍNDICE DE LAWTON & BRODY")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
                         .frame(width: 380, height: 300)
@@ -93,11 +90,7 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView()) {
                                 Text("ESCALA ABREVIADA DE DEPRESIÓN GERIÁTRICA DE YESAVAGE")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
                         .frame(width: 380, height: 200)
@@ -112,29 +105,17 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView()) {
                                 Text("ESCALA SARC-F")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(rojoPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("RojoPrueba"))
                             }
                             
                             NavigationLink(destination: PruebaView()) {
                                 Text("SHORT PHYSICAL PERFORMANCE BATTERY (SPPB)")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                             
                             NavigationLink(destination: PruebaView()) {
                                 Text("CUESTIONARIO FRAIL PARA DETECCIÓN DE FRAGILIDAD")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 18, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
                         .frame(width: 380, height: 430)
@@ -149,11 +130,7 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView()) {
                                 Text("ESCALA DE VALORACIÓN SOCIOFAMILIAR DE GIJÓN")
-                                    .foregroundColor(.black)
-                                    .font(.system(size: 20, weight: .semibold))
-                                    .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
-                                    .cornerRadius(30)
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
                         .frame(width: 380, height: 200)
