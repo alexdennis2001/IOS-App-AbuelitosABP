@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct RecuperarContrasenaView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
     @State private var cel: String = ""
     
     var body: some View {
         NavigationView {
             ZStack {
-                Color(azulAbuelos)
+                Color("BackgroundColor")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Image("logo_casa_vida")
