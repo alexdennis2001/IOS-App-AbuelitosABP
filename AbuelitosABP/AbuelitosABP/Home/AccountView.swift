@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
+    @AppStorage("Page") var currentPage: Page?
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -94,15 +95,12 @@ struct AccountView: View {
                     .padding(.bottom, 90)
                     
                     Button {
-                        
+                        currentPage = .login
                     } label: {
                         
                         HStack{
-                            Text("Editar Formulario")
-                                .offset(x: -28)
-                            Image(systemName: "greaterthan").font(.system(size: 30, weight: .ultraLight))
-                                .offset(x: 51, y: 0)
-                            
+                            Text("Cerrar Sesión")
+                                
                         }
                         .foregroundColor(.black)
                         .background(
