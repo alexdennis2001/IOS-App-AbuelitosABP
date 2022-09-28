@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct RegistroView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
     @State private var cel: String = ""
     @State private var password: String = ""
     @State private var confPassword: String = ""
@@ -16,7 +15,7 @@ struct RegistroView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                Color(azulAbuelos)
+                Color("BackgroundColor")
                     .edgesIgnoringSafeArea(.all)
                 VStack {
                     Image("logo_casa_vida")
