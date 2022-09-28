@@ -8,15 +8,11 @@
 import SwiftUI
 
 struct PruebasView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
-    let rojoPrueba = UIColor(red: 0.97, green: 0.61, blue: 0.63, alpha: 1.00)
-    let verdePrueba = UIColor(red: 0.43, green: 0.85, blue: 0.49, alpha: 1.00)
-    let amarilloPrueba = UIColor(red: 0.99, green: 0.96, blue: 0.60, alpha: 1.00)
     
     var body: some View {
         NavigationView{
             ZStack(alignment: .center) {
-                Color(azulAbuelos)
+                Color("BackgroundColor")
                     .ignoresSafeArea()
                 VStack(alignment: .leading){
                     Image("logo_abuelitos")
@@ -40,7 +36,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(verdePrueba))
+                                    .background(Color("VerdePrueba"))
                                     .cornerRadius(30)
                             }
                             
@@ -49,7 +45,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                         }
@@ -68,7 +64,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(rojoPrueba))
+                                    .background(Color("RojoPrueba"))
                                     .cornerRadius(30)
                             }
                             
@@ -77,7 +73,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                         }
@@ -96,7 +92,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                         }
@@ -115,7 +111,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(rojoPrueba))
+                                    .background(Color("RojoPrueba"))
                                     .cornerRadius(30)
                             }
                             
@@ -124,7 +120,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 18, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                             
@@ -133,7 +129,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 18, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                         }
@@ -152,7 +148,7 @@ struct PruebasView: View {
                                     .foregroundColor(.black)
                                     .font(.system(size: 20, weight: .semibold))
                                     .frame(width: 320, height: 100)
-                                    .background(Color(amarilloPrueba))
+                                    .background(Color("AmarilloPrueba"))
                                     .cornerRadius(30)
                             }
                         }

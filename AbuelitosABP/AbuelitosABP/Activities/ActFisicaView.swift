@@ -8,13 +8,12 @@
 import SwiftUI
 
 struct ActFisicaView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
     @StateObject private var vm = ViewModel()
     private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     var body: some View {
         ZStack {
-            Color(azulAbuelos)
+            Color("BackgroundColor")
                 .ignoresSafeArea()
             
             VStack{
