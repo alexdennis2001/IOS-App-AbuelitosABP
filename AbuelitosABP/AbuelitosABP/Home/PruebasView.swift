@@ -26,6 +26,8 @@ extension View {
 }
 
 struct PruebasView: View {
+    @ObservedObject var pruebaModel: PruebaModel
+    
     var body: some View {
         NavigationView{
             ZStack(alignment: .center) {
@@ -45,35 +47,35 @@ struct PruebasView: View {
                     
                     ScrollView(showsIndicators: false) {
                         
-                        VStack(alignment: .leading, spacing: 20) {
-                            Text("Cognitiva")
-                                .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView()) {
-                                Text("TIMED UP AND GO")
-                                    .card(backgroundColor: Color("VerdePrueba"))
-                            }
-                            
-                            NavigationLink(destination: PruebaView()) {
-                                Text("MINI MENTAL STATE EXAMINATION DE FOLSTEIN")
-                                    .card(backgroundColor: Color("AmarilloPrueba"))
-                            }
-                        }
-                        .frame(width: 380, height: 300)
-                        .background(
-                            RoundedRectangle(cornerRadius: 40)
-                                .fill(.white)
-                        )
-                        .padding(.bottom, 5)
+//                        VStack(alignment: .leading, spacing: 20) {
+//                            Text("Cognitiva")
+//                                .font(.system(size: 26, weight: .semibold))
+//                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
+//                                Text("TIMED UP AND GO")
+//                                    .card(backgroundColor: Color("VerdePrueba"))
+//                            }
+//
+//                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
+//                                Text("MINI MENTAL STATE EXAMINATION DE FOLSTEIN")
+//                                    .card(backgroundColor: Color("AmarilloPrueba"))
+//                            }
+//                        }
+//                        .frame(width: 380, height: 300)
+//                        .background(
+//                            RoundedRectangle(cornerRadius: 40)
+//                                .fill(.white)
+//                        )
+//                        .padding(.bottom, 5)
                         
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Funcionalidad")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView()) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
                                 Text("ÍNDICE DE KATZ")
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
-                            
-                            NavigationLink(destination: PruebaView()) {
+
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
                                 Text("ÍNDICE DE LAWTON & BRODY")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -84,11 +86,11 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-                        
+
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Afectivo - Calidad de Vida")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView()) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[2])) {
                                 Text("ESCALA ABREVIADA DE DEPRESIÓN GERIÁTRICA DE YESAVAGE")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -99,21 +101,22 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-                        
+
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Desempeño Físico")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView()) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[3])) {
                                 Text("ESCALA SARC-F")
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
                             
-                            NavigationLink(destination: PruebaView()) {
-                                Text("SHORT PHYSICAL PERFORMANCE BATTERY (SPPB)")
-                                    .card(backgroundColor: Color("AmarilloPrueba"))
-                            }
-                            
-                            NavigationLink(destination: PruebaView()) {
+
+//                            NavigationLink(destination: PruebaView()) {
+//                                Text("SHORT PHYSICAL PERFORMANCE BATTERY (SPPB)")
+//                                    .card(backgroundColor: Color("AmarilloPrueba"))
+//                            }
+
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[4])) {
                                 Text("CUESTIONARIO FRAIL PARA DETECCIÓN DE FRAGILIDAD")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -124,11 +127,11 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-                        
+
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Riesgo Social")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView()) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[5])) {
                                 Text("ESCALA DE VALORACIÓN SOCIOFAMILIAR DE GIJÓN")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -154,6 +157,6 @@ struct PruebasView: View {
 
 struct PruebasView_Previews: PreviewProvider {
     static var previews: some View {
-        PruebasView()
+        PruebasView(pruebaModel: PruebaModel())
     }
 }

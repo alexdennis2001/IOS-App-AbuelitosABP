@@ -20,7 +20,7 @@ struct MenuView: View {
                     Image(systemName: "newspaper")
                     Text("Actividades")
                 }
-            PruebasView()
+            PruebasView(pruebaModel: PruebaModel())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Pruebas")

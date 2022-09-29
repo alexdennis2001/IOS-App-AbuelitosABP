@@ -9,8 +9,9 @@ import SwiftUI
 
 struct PruebaView: View {
     let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
-    
     let greyButton = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+    
+    var prueba: Prueba
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -22,7 +23,7 @@ struct PruebaView: View {
                     .font(.system(size: 28, weight: .semibold))
                     .padding(.bottom, 1)
                 
-                Text("ÍNDICE DE KATZ")
+                Text(prueba.nombre)
                     .font(.system(size: 20, weight: .medium))
                 
                 VStack{
@@ -49,13 +50,16 @@ struct PruebaView: View {
                 
                 
                 VStack{
-                    Text("¿Recibe ayuda para bañarse?")
+                    Text(prueba.preg_resp[0].pregunta)
                         .font(.system(size: 24, weight: .medium))
+                        .minimumScaleFactor(0.1)
+                        .frame(width: 340, height: 80)
+                        .multilineTextAlignment(.center)
                     
                     Button {
                         
                     } label: {
-                        Text("No recibo ayuda")
+                        Text(prueba.preg_resp[0].respuesta[0])
                             .font(.system(size: 24, weight: .medium))
                             .minimumScaleFactor(0.1)
                             .frame(width: 280, height: 70)
@@ -73,7 +77,7 @@ struct PruebaView: View {
                     Button {
                         
                     } label: {
-                        Text("Recibo ayuda con una parte del cuerpo")
+                        Text(prueba.preg_resp[0].respuesta[1])
                             .font(.system(size: 24, weight: .medium))
                             .minimumScaleFactor(0.1)
                             .frame(width: 280, height: 70)
@@ -94,7 +98,7 @@ struct PruebaView: View {
                     Button {
                         
                     } label: {
-                        Text("Recibo ayuda con más de una parte del cuerpo")
+                        Text(prueba.preg_resp[0].respuesta[2])
                             .font(.system(size: 24, weight: .medium))
                             .minimumScaleFactor(0.1)
                             .frame(width: 280, height: 70)
@@ -111,7 +115,7 @@ struct PruebaView: View {
                     Button {
                         
                     } label: {
-                        Text("No me baño")
+                        Text(prueba.preg_resp[0].respuesta[3])
                             .font(.system(size: 24, weight: .medium))
                             .minimumScaleFactor(0.1)
                             .frame(width: 280, height: 70)
@@ -146,6 +150,12 @@ struct PruebaView: View {
 
 struct PruebaView_Previews: PreviewProvider {
     static var previews: some View {
-        PruebaView()
+        PruebaView(prueba: Prueba(nombre: "ÍNDICE DE KATZ", preg_resp: [
+            PregResp(pregunta: "¿Recibe ayuda para bañarse?", respuesta: ["No recibo ayuda","Recibo ayuda con una parte del cuerpo","Recibo ayuda con más de una parte del cuerpo","No me baño"]),
+            PregResp(pregunta: "¿Recibe ayuda para vestirse?", respuesta: ["Me visto solo","Requiero ayuda para los zapatos","Recibo ayuda para la ropa","No me visto"]),
+            PregResp(pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: ["Voy solo y me arreglo","Recibo ayuda para ir y asearse","No voy al servicio"]),
+            PregResp(pregunta: "¿Recibe ayuda para levantarse?", respuesta: ["Me levanto y me acuesto solo","Necesita ayuda","No puedo salir de cama"]),
+            PregResp(pregunta: "¿Recibe ayuda para comer?", respuesta: ["Como solo con cubiertos","Requiero ayuda","Requiero ayuda total","Sonda"]),
+            PregResp(pregunta: "¿Realiza continencias?", respuesta: ["Contiene todo el día y noche","Incontinencia ocasional nocturna","Incontinencia permanente"])]))
     }
 }
