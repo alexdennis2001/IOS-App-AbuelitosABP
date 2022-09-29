@@ -121,7 +121,7 @@ struct PruebasView: View {
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                         }
-                        .frame(width: 380, height: 430)
+                        .frame(width: 380, height: 300)
                         .background(
                             RoundedRectangle(cornerRadius: 40)
                                 .fill(.white)

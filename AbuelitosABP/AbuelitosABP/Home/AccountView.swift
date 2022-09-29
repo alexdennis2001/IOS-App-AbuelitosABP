@@ -60,7 +60,7 @@ struct AccountView: View {
                     } label: {
                         
                         HStack{
-                            Text("Cambiar Teléfono Celular")
+                            Text("Cambiar Datos Cuenta")
                             Image(systemName: "greaterthan").font(.system(size: 30, weight: .ultraLight))
                                 .offset(x: 20, y: 0)
                             
@@ -79,7 +79,7 @@ struct AccountView: View {
                     } label: {
                         
                         HStack{
-                            Text("Cambiar Contraseña")
+                            Text("Editar Formulario")
                                 .offset(x: -17)
                             Image(systemName: "greaterthan").font(.system(size: 30, weight: .ultraLight))
                                 .offset(x: 38, y: 0)
