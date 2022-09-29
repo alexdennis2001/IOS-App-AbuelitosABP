@@ -24,7 +24,7 @@ class PruebaModel: ObservableObject {
             PregResp(pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: ["Voy solo y me arreglo","Recibo ayuda para ir y asearse","No voy al servicio"]),
             PregResp(pregunta: "¿Recibe ayuda para levantarse?", respuesta: ["Me levanto y me acuesto solo","Necesita ayuda","No puedo salir de cama"]),
             PregResp(pregunta: "¿Recibe ayuda para comer?", respuesta: ["Como solo con cubiertos","Requiero ayuda","Requiero ayuda total","Sonda"]),
-            PregResp(pregunta: "¿Realiza continencias?", respuesta: ["Contiene todo el día y noche","Incontinencia ocasional nocturna","Incontinencia permanente"])])
+            PregResp(pregunta: "¿Practica la continencia?", respuesta: ["Contiene todo el día y noche","Incontinencia ocasional nocturna","Incontinencia permanente"])])
         
         
         pruebas.append(prueba)
