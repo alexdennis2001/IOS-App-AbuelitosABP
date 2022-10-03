@@ -8,14 +8,12 @@
 import SwiftUI
 
 struct PruebaView: View {
-    let azulAbuelos = UIColor(red: 0.85, green: 0.93, blue: 0.94, alpha: 1.00)
     let greyButton = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
-    
     var prueba: Prueba
     
     var body: some View {
         ZStack(alignment: .top) {
-            Color(azulAbuelos)
+            Color("BackgroundColor")
                 .ignoresSafeArea()
             
             VStack{
@@ -56,79 +54,30 @@ struct PruebaView: View {
                         .frame(width: 340, height: 80)
                         .multilineTextAlignment(.center)
                     
-                    Button {
-                        
-                    } label: {
-                        Text(prueba.preg_resp[0].respuesta[0])
-                            .font(.system(size: 24, weight: .medium))
-                            .minimumScaleFactor(0.1)
-                            .frame(width: 280, height: 70)
-                            .foregroundColor(.black)
-                        
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color(greyButton))
-                            .frame(width: 300, height: 80)
-                            .opacity(0.5)
-                    )
-                    .frame(width: 300, height: 80)
+
                     
-                    Button {
-                        
-                    } label: {
-                        Text(prueba.preg_resp[0].respuesta[1])
-                            .font(.system(size: 24, weight: .medium))
-                            .minimumScaleFactor(0.1)
-                            .frame(width: 280, height: 70)
-                            .foregroundColor(.black)
-                        
-                        
+                    ForEach(0 ..< prueba.preg_resp[0].respuesta.count, id: \.self){ respuesta in
+                        Button {
+
+                        } label: {
+                            Text(prueba.preg_resp[0].respuesta[respuesta])
+                                .font(.system(size: 24, weight: .medium))
+                                .minimumScaleFactor(0.1)
+                                .frame(width: 280, height: 70)
+                                .foregroundColor(.black)
+
+                        }
+                        .background(
+                            RoundedRectangle(cornerRadius: 30)
+                                .fill(Color(greyButton))
+                                .frame(width: 300, height: 80)
+                                .opacity(0.5)
+                        )
+                        .frame(width: 300, height: 80)
                         
                     }
-                    .background(
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color(greyButton))
-                            .frame(width: 300, height: 80)
-                            .opacity(0.5)
-                    )
-                    .frame(width: 300, height: 80)
                     
                     
-                    Button {
-                        
-                    } label: {
-                        Text(prueba.preg_resp[0].respuesta[2])
-                            .font(.system(size: 24, weight: .medium))
-                            .minimumScaleFactor(0.1)
-                            .frame(width: 280, height: 70)
-                            .foregroundColor(.black)
-                        
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color(greyButton))
-                            .frame(width: 300, height: 80)
-                            .opacity(0.5)
-                    )
-                    .frame(width: 300, height: 80)
-                    Button {
-                        
-                    } label: {
-                        Text(prueba.preg_resp[0].respuesta[3])
-                            .font(.system(size: 24, weight: .medium))
-                            .minimumScaleFactor(0.1)
-                            .frame(width: 280, height: 70)
-                            .foregroundColor(.black)
-                        
-                    }
-                    .background(
-                        RoundedRectangle(cornerRadius: 30)
-                            .fill(Color(greyButton))
-                            .frame(width: 300, height: 80)
-                            .opacity(0.5)
-                    )
-                    .frame(width: 300, height: 80)
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 30)

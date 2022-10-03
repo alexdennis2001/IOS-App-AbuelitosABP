@@ -42,7 +42,7 @@ class PruebaModel: ObservableObject {
         pruebas.append(prueba)
         
         
-        prueba = Prueba(nombre: "ESCALA ABREVIADA DE DEPRESIÓN GERIÁTRICA DE YESAVAGE", preg_resp: [
+        prueba = Prueba(nombre: "ESCALA ABREVIADA DE YESAVAGE", preg_resp: [
             PregResp(pregunta: "¿Está usted satisfecho con su vida?", respuesta: ["SI","NO"]),
             PregResp(pregunta: "¿Ha abandonado sus actividades e intereses?", respuesta: ["SI","NO"]),
             PregResp(pregunta: "¿Siente su vida vacía?", respuesta: ["SI","NO"]),
@@ -70,7 +70,7 @@ class PruebaModel: ObservableObject {
         
         pruebas.append(prueba)
         
-        prueba = Prueba(nombre: "CUESTIONARIO FRAIL PARA DETECCIÓN DE FRAGILIDAD", preg_resp: [
+        prueba = Prueba(nombre: "CUESTIONARIO FRAIL", preg_resp: [
             PregResp(pregunta: "¿Está usted cansado?", respuesta: ["SI","NO"]),
             PregResp(pregunta: "¿Es incapaz de subir un piso de escaleras?", respuesta: ["SI","NO"]),
             PregResp(pregunta: "¿Es incapaz de caminar una manzana?", respuesta: ["SI","NO"]),
@@ -79,7 +79,7 @@ class PruebaModel: ObservableObject {
         
         pruebas.append(prueba)
         
-        prueba = Prueba(nombre: "ESCALA DE VALORACIÓN SOCIOFAMILIAR DE GIJÓN", preg_resp: [
+        prueba = Prueba(nombre: "VALORACIÓN SOCIOFAMILIAR DE GIJÓN", preg_resp: [
             PregResp(pregunta: "¿Cúal es su situación familiar?", respuesta: ["Vivo con pareja y/o familia sin conflicto","Vivo con pareja de edad smiliar","Vivo con pareja y/o otros, pero no pueden o no quieren atenderlo","Vivo solo, hijos y/o familiares próximos que no cubren todas las necesidades","Vive solo, familia lejana, desatendido, sin familia"]),
             PregResp(pregunta: "¿Cómo son sus relaciones y contactos sociales?", respuesta: ["Mantengo relaciones sociales fuera del domicilio","Sólo me relaciono con familia/vecinos/otros","Sólo me relaciono con familia","No salgo de mi domicilio, recibo familia o visitas","No salgo de mi domicilio, no recibo visitas"]),
             PregResp(pregunta: "Apoyos red social", respuesta: ["No necesito ningún apoyo","Recibo apoyo de familia y/o vecinos","Recibo apoyo social formal suficiente","Tengo soporte social pero es insuficiente","No tengo ningún soporte social y lo necesito"])])

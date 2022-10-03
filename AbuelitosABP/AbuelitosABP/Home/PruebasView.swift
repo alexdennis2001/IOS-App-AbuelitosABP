@@ -37,7 +37,7 @@ struct PruebasView: View {
                     Image("logo_abuelitos")
                         .scaledToFit()
                         .padding(.bottom, 5)
-                        .offset(x: 10,y: 16)
+                        .offset(x: 10,y: 7)
                     
                     Text("Pruebas de Tamizaje")
                         .font(.system(size: 28, weight: .semibold))
