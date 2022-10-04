@@ -10,5 +10,6 @@ import Foundation
 enum Page: String {
     case login = "login"
     case menu = "menu"
+    case congrats = "congrats"
 }
 

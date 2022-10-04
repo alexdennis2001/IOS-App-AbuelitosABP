@@ -141,12 +141,12 @@ struct PruebasView: View {
                             RoundedRectangle(cornerRadius: 40)
                                 .fill(.white)
                         )
-                        .padding(.bottom, 5)
+                        .padding(.bottom, 25)
                         
                     }
-                    .frame(width: 380, height: 650)
+                    .frame(width: 380, height: 670)
                 
-                }.offset(x: 0, y: -60)
+                }.offset(x: 0, y: -50)
     
                 
             }

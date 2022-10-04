@@ -17,6 +17,8 @@ struct LoginControllerView: View {
                 LoginView()
             case .menu:
                 MenuView()
+            case .congrats:
+                CongratulationsView()
             }
         }
     }

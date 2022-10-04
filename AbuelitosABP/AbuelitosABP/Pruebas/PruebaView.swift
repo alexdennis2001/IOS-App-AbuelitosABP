@@ -9,9 +9,12 @@ import SwiftUI
 
 struct PruebaView: View {
     let greyButton = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+    @State var questionNumber = 0
+    @AppStorage("Page") var currentPage: Page?
     var prueba: Prueba
     
     var body: some View {
+        
         ZStack(alignment: .top) {
             Color("BackgroundColor")
                 .ignoresSafeArea()
@@ -48,33 +51,41 @@ struct PruebaView: View {
                 
                 
                 VStack{
-                    Text(prueba.preg_resp[0].pregunta)
+                    Text(prueba.preg_resp[questionNumber].pregunta)
                         .font(.system(size: 24, weight: .medium))
                         .minimumScaleFactor(0.1)
                         .frame(width: 340, height: 80)
                         .multilineTextAlignment(.center)
                     
-
-                    
-                    ForEach(0 ..< prueba.preg_resp[0].respuesta.count, id: \.self){ respuesta in
-                        Button {
-
-                        } label: {
-                            Text(prueba.preg_resp[0].respuesta[respuesta])
-                                .font(.system(size: 24, weight: .medium))
-                                .minimumScaleFactor(0.1)
-                                .frame(width: 280, height: 70)
-                                .foregroundColor(.black)
-
-                        }
-                        .background(
-                            RoundedRectangle(cornerRadius: 30)
-                                .fill(Color(greyButton))
-                                .frame(width: 300, height: 80)
-                                .opacity(0.5)
-                        )
-                        .frame(width: 300, height: 80)
+                    ScrollView(.vertical, showsIndicators: false) {
                         
+                        
+                        
+                        ForEach(0 ..< prueba.preg_resp[questionNumber].respuesta.count, id: \.self){ respuesta in
+                            Button(action:{
+                                if prueba.preg_resp.count > questionNumber + 1 {
+                                    questionNumber += 1
+                                } else {
+                                    currentPage = .congrats
+                                }
+                                
+                            },label: {
+                                Text(prueba.preg_resp[questionNumber].respuesta[respuesta])
+                                    .font(.system(size: 24, weight: .medium))
+                                    .minimumScaleFactor(0.1)
+                                    .frame(width: 280, height: 70)
+                                    .foregroundColor(.black)
+                                
+                            })
+                            .background(
+                                RoundedRectangle(cornerRadius: 30)
+                                    .fill(Color(greyButton))
+                                    .frame(width: 300, height: 80)
+                                    .opacity(0.5)
+                            )
+                            .frame(width: 300, height: 80)
+                            
+                        }
                     }
                     
                     
@@ -95,6 +106,8 @@ struct PruebaView: View {
             
         }
     }
+    
+    
 }
 
 struct PruebaView_Previews: PreviewProvider {
