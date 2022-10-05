@@ -22,6 +22,12 @@
 		1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCFE28CFB61600193CCE /* AccountView.swift */; };
 		1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */; };
 		1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */; };
+		1B200FC428EDEFD3001CC1CF /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC328EDEFD3001CC1CF /* SelectorView.swift */; };
+		1B200FCA28EDEFFA001CC1CF /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */; };
+		1B200FCB28EDEFFA001CC1CF /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */; };
+		1B200FCC28EDEFFA001CC1CF /* FormularioDatosPersonalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */; };
+		1B200FCD28EDEFFA001CC1CF /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */; };
+		1B200FCE28EDEFFA001CC1CF /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC928EDEFFA001CC1CF /* Dropdown.swift */; };
 		1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */; };
 		1B21A59028CA59210060B598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58F28CA59210060B598 /* ContentView.swift */; };
 		1B21A59228CA59240060B598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21A59128CA59240060B598 /* Assets.xcassets */; };
@@ -52,6 +58,12 @@
 		1B1AFCFE28CFB61600193CCE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFisicaView.swift; sourceTree = "<group>"; };
 		1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer-ViewModel.swift"; sourceTree = "<group>"; };
+		1B200FC328EDEFD3001CC1CF /* SelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
+		1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
+		1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
+		1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioDatosPersonalesView.swift; sourceTree = "<group>"; };
+		1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		1B200FC928EDEFFA001CC1CF /* Dropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
 		1B21A58A28CA59210060B598 /* AbuelitosABP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbuelitosABP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbuelitosABPApp.swift; sourceTree = "<group>"; };
 		1B21A58F28CA59210060B598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -102,6 +114,12 @@
 		1B07625128DE1DEA00E6425C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				1B200FC928EDEFFA001CC1CF /* Dropdown.swift */,
+				1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */,
+				1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */,
+				1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */,
+				1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */,
+				1B200FC328EDEFD3001CC1CF /* SelectorView.swift */,
 				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
 				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
 				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
@@ -262,6 +280,8 @@
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
 				1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */,
 				1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */,
+				1B200FCC28EDEFFA001CC1CF /* FormularioDatosPersonalesView.swift in Sources */,
+				1B200FCA28EDEFFA001CC1CF /* DropdownRow.swift in Sources */,
 				1B07624D28DE13D900E6425C /* LoginControllerView.swift in Sources */,
 				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
@@ -271,7 +291,11 @@
 				1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */,
 				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
 				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
+				1B200FCE28EDEFFA001CC1CF /* Dropdown.swift in Sources */,
+				1B200FC428EDEFD3001CC1CF /* SelectorView.swift in Sources */,
+				1B200FCB28EDEFFA001CC1CF /* DropdownSelector.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
+				1B200FCD28EDEFFA001CC1CF /* TextFieldView.swift in Sources */,
 				1B1AFCF928CE3A0300193CCE /* HomeView.swift in Sources */,
 				1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */,
 				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
