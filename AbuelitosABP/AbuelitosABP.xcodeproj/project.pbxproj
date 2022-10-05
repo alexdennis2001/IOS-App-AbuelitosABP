@@ -31,6 +31,12 @@
 		1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */; };
 		1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */; };
 		1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */; };
+		8AED3E8128EB34C70040637F /* FormularioDatosPersonalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8028EB34C70040637F /* FormularioDatosPersonalesView.swift */; };
+		8AED3E8328EB414C0040637F /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8228EB414C0040637F /* TextFieldView.swift */; };
+		8AED3E8728EB4D280040637F /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8628EB4D280040637F /* DropdownSelector.swift */; };
+		8AED3E8928EB4DF20040637F /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8828EB4DF20040637F /* Dropdown.swift */; };
+		8AED3E8D28EB4E860040637F /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8C28EB4E860040637F /* DropdownRow.swift */; };
+		8AED3E8F28EB51E40040637F /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E8E28EB51E40040637F /* SelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +65,12 @@
 		1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaModel.swift; sourceTree = "<group>"; };
 		1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregResp.swift; sourceTree = "<group>"; };
 		1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarDatosView.swift; sourceTree = "<group>"; };
+		8AED3E8028EB34C70040637F /* FormularioDatosPersonalesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioDatosPersonalesView.swift; sourceTree = "<group>"; };
+		8AED3E8228EB414C0040637F /* TextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
+		8AED3E8628EB4D280040637F /* DropdownSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
+		8AED3E8828EB4DF20040637F /* Dropdown.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		8AED3E8C28EB4E860040637F /* DropdownRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
+		8AED3E8E28EB51E40040637F /* SelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +111,12 @@
 				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
 				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
 				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
+				8AED3E8028EB34C70040637F /* FormularioDatosPersonalesView.swift */,
+				8AED3E8228EB414C0040637F /* TextFieldView.swift */,
+				8AED3E8E28EB51E40040637F /* SelectorView.swift */,
+				8AED3E8628EB4D280040637F /* DropdownSelector.swift */,
+				8AED3E8828EB4DF20040637F /* Dropdown.swift */,
+				8AED3E8C28EB4E860040637F /* DropdownRow.swift */,
 				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
 			);
 			path = Home;
@@ -246,19 +264,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
+				8AED3E8F28EB51E40040637F /* SelectorView.swift in Sources */,
 				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
+				8AED3E8328EB414C0040637F /* TextFieldView.swift in Sources */,
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
 				1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */,
 				1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */,
 				1B07624D28DE13D900E6425C /* LoginControllerView.swift in Sources */,
+				8AED3E8728EB4D280040637F /* DropdownSelector.swift in Sources */,
 				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
 				1B21A59028CA59210060B598 /* ContentView.swift in Sources */,
 				1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */,
 				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
 				1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */,
+				8AED3E8928EB4DF20040637F /* Dropdown.swift in Sources */,
 				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
 				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
@@ -266,7 +288,9 @@
 				1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */,
 				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
+				8AED3E8128EB34C70040637F /* FormularioDatosPersonalesView.swift in Sources */,
 				1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */,
+				8AED3E8D28EB4E860040637F /* DropdownRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,7 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AbuelitosABP/Preview Content\"";
-				DEVELOPMENT_TEAM = 74K5X7VW9D;
+				DEVELOPMENT_TEAM = HFT8347U46;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -411,7 +435,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrodennis.AbuelitosABP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturogarza.AbuelitosABP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -429,7 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"AbuelitosABP/Preview Content\"";
-				DEVELOPMENT_TEAM = 74K5X7VW9D;
+				DEVELOPMENT_TEAM = HFT8347U46;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -444,7 +468,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrodennis.AbuelitosABP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturogarza.AbuelitosABP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
