@@ -87,9 +87,6 @@ class PruebaModel: ObservableObject {
         pruebas.append(prueba)
         
         
-        
-        
-        
     }
     
     
