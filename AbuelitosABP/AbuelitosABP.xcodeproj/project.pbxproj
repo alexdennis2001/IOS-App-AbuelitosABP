@@ -41,6 +41,7 @@
 		1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */; };
 		1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
+		8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +81,7 @@
 		1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregResp.swift; sourceTree = "<group>"; };
 		1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarDatosView.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioUbicacionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */,
 				1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */,
 				1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */,
+				8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */,
 				1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */,
 				1B200FC328EDEFD3001CC1CF /* SelectorView.swift */,
 				1B1AFCF828CE3A0300193CCE /* HomeView.swift */,
@@ -278,6 +281,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */,
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
 				1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */,
 				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
@@ -454,7 +458,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrodennis.AbuelitosABP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturogarza.AbuelitosABP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -488,7 +492,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alejandrodennis.AbuelitosABP;
+				PRODUCT_BUNDLE_IDENTIFIER = com.arturogarza.AbuelitosABP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_EMIT_LOC_STRINGS = YES;
