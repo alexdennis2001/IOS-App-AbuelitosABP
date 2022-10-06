@@ -14,6 +14,7 @@ struct FormularioUbicacionView: View {
     @State private var edad: String = ""
     @State private var estatura: String = ""
     @State private var peso: String = ""
+    @AppStorage("Page") var currentPage: Page?
     let titleFields = ["Estado", "Municipio", "Zona", "Decanato", "Parroquia/Capilla", "Dirección"]
     static var uniqueKey: String {
         UUID().uuidString
@@ -35,9 +36,9 @@ struct FormularioUbicacionView: View {
         GeometryReader{ geo in
             Color("BackgroundColor")
                 .ignoresSafeArea(.all)
-            ZStack{
+            ZStack(){
                 VStack(alignment: .center){
-                    HStack{
+                    HStack(){
                         VStack{
                             Text("Formulario")
                                 .font(.system(size: 56, weight: .semibold))
@@ -74,7 +75,9 @@ struct FormularioUbicacionView: View {
                                 .fill(Color("CardColorFormularioU"))
                         )
                         HStack(){
-                            NavigationLink(destination: CambiarDatosView()){
+                            Button {
+                                currentPage = .formularioPersonal
+                            } label: {
                                 Text("Atras")
                                     .font(.system(size: 20, weight: .bold))
                                     .foregroundColor(.white)
@@ -83,10 +86,11 @@ struct FormularioUbicacionView: View {
                                             .fill(Color("ButtonColor"))
                                             .frame(width: geo.size.width * 0.35, height: geo.size.height * 0.08)
                                     )
-                                
                             }
                             Spacer()
-                            NavigationLink(destination: CambiarDatosView()){
+                            Button {
+                                currentPage = .menu
+                            } label: {
                                 Text("Terminar")
                                     .font(.system(size: 20, weight: .bold))
                                     .foregroundColor(.white)
@@ -95,13 +99,13 @@ struct FormularioUbicacionView: View {
                                             .fill(Color("ButtonColor"))
                                             .frame(width: geo.size.width * 0.35, height: geo.size.height * 0.08)
                                     )
-                                
                             }
                         }
                         .frame(width: geo.size.width * 0.65, height: geo.size.height * 0.05)
                         .padding(.leading, 20)
                     }
                 }
+                .padding()
             }
         }
     }
@@ -110,6 +114,7 @@ struct FormularioUbicacionView: View {
 struct FormularioUbicacionView_Previews: PreviewProvider {
     static var previews: some View {
         FormularioUbicacionView()
+            .previewDevice("iPad (9th generation)")
     }
 }
 

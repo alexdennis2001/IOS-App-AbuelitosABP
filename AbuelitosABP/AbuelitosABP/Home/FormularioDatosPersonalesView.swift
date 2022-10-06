@@ -39,7 +39,7 @@ struct FormularioDatosPersonalesView: View {
             Color("BackgroundColor")
                 .ignoresSafeArea(.all)
             ZStack{
-                VStack{
+                VStack(alignment: .center){
                     HStack{
                         VStack{
                             Text("Formulario")
@@ -96,9 +96,8 @@ struct FormularioDatosPersonalesView: View {
                     )
                     HStack(){
                         Spacer()
-                        
                         Button {
-                            currentPage = .menu
+                            currentPage = .formularioUbicacion
                         } label: {
                             Text("Siguiente")
                                 .font(.system(size: 20, weight: .bold))
@@ -109,14 +108,12 @@ struct FormularioDatosPersonalesView: View {
                                         .frame(width: geo.size.width * 0.35, height: geo.size.height * 0.08)
                                 )
                         }
-                        
-                        
                     }
-                    .frame(width: geo.size.width * 0.75, height: geo.size.height * 0.05)
+                    .frame(width: geo.size.width * 0.6, height: geo.size.height * 0.05)
                     .padding()
                 }
             }
-            .frame(width: 415)
+            .frame(width: geo.size.width * 1, height: geo.size.height * 1)
         }
     }
 }
@@ -124,5 +121,6 @@ struct FormularioDatosPersonalesView: View {
 struct FormularioDatosPersonalesView_Previews: PreviewProvider {
     static var previews: some View {
         FormularioDatosPersonalesView()
+            .previewDevice("iPhone 13 Pro")
     }
 }
