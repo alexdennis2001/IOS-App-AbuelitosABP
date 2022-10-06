@@ -9,27 +9,32 @@ import SwiftUI
 
 struct MenuView: View {
     
+    @AppStorage("Menu") var tabSelection: Int = 1
+    
     init() {
         UITabBar.appearance().backgroundColor = UIColor.white
     }
         
     var body: some View {
-        TabView {
+        TabView(selection: $tabSelection) {
             HomeView()
                 .tabItem {
                     Image(systemName: "newspaper")
                     Text("Actividades")
                 }
+                .tag(1)
             PruebasView(pruebaModel: PruebaModel())
                 .tabItem {
                     Image(systemName: "list.bullet")
                     Text("Pruebas")
                 }
+                .tag(2)
             AccountView()
                 .tabItem {
                     Image(systemName: "person.circle")
                     Text("Cuenta")
                 }
+                .tag(3)
         }
         
     }

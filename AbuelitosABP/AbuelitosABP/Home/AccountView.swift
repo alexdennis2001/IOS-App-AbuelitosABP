@@ -9,6 +9,7 @@ import SwiftUI
 
 struct AccountView: View {
     @AppStorage("Page") var currentPage: Page?
+    @AppStorage("Menu") var tabSelection: Int?
     
     var body: some View {
         NavigationView{
@@ -96,6 +97,7 @@ struct AccountView: View {
                       
                         
                         Button {
+                            tabSelection = 1
                             currentPage = .login
                         } label: {
                             

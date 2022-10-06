@@ -12,6 +12,7 @@ struct CongratulationsView: View {
     @State var wish = false
     @State var finishWish = false
     @AppStorage("Page") var currentPage: Page?
+    @AppStorage("Menu") var tabSelection: Int?
     
     let azulClaro = UIColor(red: 0.28, green: 0.71, blue: 1.00, alpha: 1.00)
     
@@ -38,6 +39,7 @@ struct CongratulationsView: View {
                 
                 
                 Button {
+                    tabSelection = 2
                     currentPage = .menu
                 } label: {
                     Text("Continuar")

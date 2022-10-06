@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginControllerView: View {
     @AppStorage("Page") var currentPage: Page = .login
     
+    
     var body: some View {
         VStack{
             switch currentPage {
