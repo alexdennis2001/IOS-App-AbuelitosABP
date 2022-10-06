@@ -31,7 +31,7 @@ struct RegistroView: View {
                                 Text("Crea tu cuenta!").font(.system(size: 34, weight: .bold))
                                     .padding(.bottom, 1)
                                 Text("Registrate para continuar").font(.system(size: 16, weight: .medium))
-                                    
+                                
                             }
                                 .frame(width: 250)
                                 .offset(x: -50, y: 0)
@@ -53,7 +53,7 @@ struct RegistroView: View {
                             Image(systemName: "lock")
                                 .foregroundColor(.secondary)
                             SecureField("Contraseña",
-                                        text: $confPassword)
+                                        text: $password)
                         }   .padding()
                             .background(Capsule().fill(Color.white))
                             .shadow(radius: 5)
@@ -73,20 +73,47 @@ struct RegistroView: View {
                     .frame(width: 350)
                     
                     VStack{
-                        Button{
-                            currentPage = .formularioPersonal
-                        } label: {
-                            Text("Crear Cuenta")
-                                .bold()
-                                .foregroundColor(.white)
-                                .background(.black)
-                                .frame(maxWidth: 320)
+                        
+                        if password != confPassword {
                             
-                        }.padding()
+                            Text("Las contraseñas no coinciden.")
+                                .foregroundColor(.red)
+                            
+                            Button{
+                                currentPage = .formularioPersonal
+                            } label: {
+                                Text("Crear Cuenta")
+                                    .bold()
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: 320)
+                                
+                                
+                            }
+                            .padding()
                             .background(Color.black)
                             .cornerRadius(10)
+                            .disabled(false)
+                            .opacity(0.5)
+                        }
+                        else {
+                            Button{
+                                currentPage = .formularioPersonal
+                            } label: {
+                                Text("Crear Cuenta")
+                                    .bold()
+                                    .foregroundColor(.white)
+                                    .frame(maxWidth: 320)
+                                
+                                
+                            }
+                            .padding()
+                            .background(Color.black)
+                            .cornerRadius(10)
+                            .disabled(false)
+                        }
                         
-                            
+                        
+                        
                         
                     }
                     .padding(.top, 30)

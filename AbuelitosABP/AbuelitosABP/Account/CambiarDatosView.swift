@@ -23,72 +23,81 @@ struct CambiarDatosView: View {
             VStack{
                 Text("Datos de la cuenta")
                     .font(.system(size: 28, weight: .semibold))
-                    .padding(.bottom, 25)
-                
-                Group{
-                    HStack(alignment: .top){
-                        Text("Nombre")
-                            .font(.system(size: 20, weight: .semibold))
+                    .padding(.bottom, 35)
+                VStack{
+                    
+                    Group{
+                        HStack(alignment: .top){
+                            Text("Nombre")
+                                .font(.system(size: 20, weight: .semibold))
+                            
+                            TextField("Nombre", text: $nombre)
+                                .font(.system(size: 20, weight: .light))
+                        }
                         
-                        TextField("Nombre", text: $nombre)
-                            .font(.system(size: 20, weight: .light))
+                        Divider()
+                            .padding(.bottom, 20)
                     }
                     
-                    Divider()
-                        .padding(.bottom, 20)
-                }
-                
-                Group{
-                    HStack(alignment: .top){
-                        Text("Apellido Paterno")
-                            .font(.system(size: 19, weight: .semibold))
+                    Group{
+                        HStack(alignment: .top){
+                            Text("Apellido Paterno")
+                                .font(.system(size: 19, weight: .semibold))
+                            
+                            TextField("Apellido Paterno", text: $apellidoP)
+                                .font(.system(size: 20, weight: .light))
+                        }
                         
-                        TextField("Apellido Paterno", text: $apellidoP)
-                            .font(.system(size: 20, weight: .light))
+                        Divider()
+                            .padding(.bottom, 20)
                     }
                     
-                    Divider()
-                        .padding(.bottom, 20)
-                }
-                
-                Group{
-                    HStack(alignment: .top){
-                        Text("Apellido Materno")
-                            .font(.system(size: 19, weight: .semibold))
+                    Group{
+                        HStack(alignment: .top){
+                            Text("Apellido Materno")
+                                .font(.system(size: 19, weight: .semibold))
+                            
+                            TextField("Apellido Materno", text: $apellidoM)
+                                .font(.system(size: 20, weight: .light))
+                        }
                         
-                        TextField("Apellido Materno", text: $apellidoM)
-                            .font(.system(size: 20, weight: .light))
+                        Divider()
+                            .padding(.bottom, 20)
                     }
                     
-                    Divider()
-                        .padding(.bottom, 20)
-                }
-                
-                Group{
-                    HStack(alignment: .top){
-                        Text("Télefono")
-                            .font(.system(size: 20, weight: .semibold))
+                    Group{
+                        HStack(alignment: .top){
+                            Text("Télefono")
+                                .font(.system(size: 20, weight: .semibold))
+                            
+                            TextField("Teléfono Celular", text: $cel)
+                                .font(.system(size: 20, weight: .light))
+                        }
                         
-                        TextField("Teléfono Celular", text: $cel)
-                            .font(.system(size: 20, weight: .light))
+                        Divider()
+                            .padding(.bottom, 20)
                     }
                     
-                    Divider()
-                        .padding(.bottom, 20)
-                }
-                
-                
-                Group{
-                    HStack(alignment: .top){
-                        Text("Contraseña")
-                            .font(.system(size: 20, weight: .semibold))
-                        SecureField("Contraseña", text: $password)
-                            .font(.system(size: 20, weight: .light))
-                        
+                    
+                    Group{
+                        HStack(alignment: .top){
+                            Text("Contraseña")
+                                .font(.system(size: 20, weight: .semibold))
+                            SecureField("Contraseña", text: $password)
+                                .font(.system(size: 20, weight: .light))
+                            
+                        }
+                        Divider()
+                            .padding(.bottom, 20)
                     }
-                    Divider()
-                        .padding(.bottom, 20)
                 }
+                .background(
+                    RoundedRectangle(cornerRadius: 30)
+                        .fill(.white)
+                        .frame(width: 380, height: 380)
+                        .shadow(color: .black, radius: 5)
+                    
+                )
                 
                 
                 
