@@ -1,19 +1,20 @@
 //
-//  CambiarDatosView.swift
+//  CambiarFormularioView.swift
 //  AbuelitosABP
 //
-//  Created by Alejandro Dennis on 29/09/22.
+//  Created by Alejandro Dennis on 05/10/22.
 //
 
 import SwiftUI
 
-struct CambiarDatosView: View {
-    @State private var nombre: String = ""
-    @State private var apellidoP: String = ""
-    @State private var apellidoM: String = ""
-    @State private var cel: String = ""
-    @State private var password: String = ""
-    @State private var edad: String = ""
+struct CambiarFormularioView: View {
+    
+    @State private var estado: String = ""
+    @State private var municipio: String = ""
+    @State private var zona: String = ""
+    @State private var decanato: String = ""
+    @State private var parroquia: String = ""
+    @State private var direccion: String = ""
     
     var body: some View {
         ZStack(alignment: .top){
@@ -21,16 +22,16 @@ struct CambiarDatosView: View {
                 .edgesIgnoringSafeArea(.all)
             
             VStack{
-                Text("Datos de la cuenta")
+                Text("Datos del Formulario")
                     .font(.system(size: 28, weight: .semibold))
                     .padding(.bottom, 25)
                 
                 Group{
                     HStack(alignment: .top){
-                        Text("Nombre")
+                        Text("Estado")
                             .font(.system(size: 20, weight: .semibold))
                         
-                        TextField("Nombre", text: $nombre)
+                        TextField("Estado", text: $estado)
                             .font(.system(size: 20, weight: .light))
                     }
                     
@@ -40,10 +41,10 @@ struct CambiarDatosView: View {
                 
                 Group{
                     HStack(alignment: .top){
-                        Text("Apellido Paterno")
+                        Text("Municipio")
                             .font(.system(size: 19, weight: .semibold))
                         
-                        TextField("Apellido Paterno", text: $apellidoP)
+                        TextField("Municipio", text: $municipio)
                             .font(.system(size: 20, weight: .light))
                     }
                     
@@ -53,10 +54,10 @@ struct CambiarDatosView: View {
                 
                 Group{
                     HStack(alignment: .top){
-                        Text("Apellido Materno")
+                        Text("Zona")
                             .font(.system(size: 19, weight: .semibold))
                         
-                        TextField("Apellido Materno", text: $apellidoM)
+                        TextField("Zona", text: $zona)
                             .font(.system(size: 20, weight: .light))
                     }
                     
@@ -66,10 +67,10 @@ struct CambiarDatosView: View {
                 
                 Group{
                     HStack(alignment: .top){
-                        Text("Télefono")
+                        Text("Decanato")
                             .font(.system(size: 20, weight: .semibold))
                         
-                        TextField("Teléfono Celular", text: $cel)
+                        TextField("Decanato", text: $decanato)
                             .font(.system(size: 20, weight: .light))
                     }
                     
@@ -80,9 +81,21 @@ struct CambiarDatosView: View {
                 
                 Group{
                     HStack(alignment: .top){
-                        Text("Contraseña")
+                        Text("Parroquia/Capilla")
                             .font(.system(size: 20, weight: .semibold))
-                        SecureField("Contraseña", text: $password)
+                        SecureField("Parroquia/Capilla", text: $parroquia)
+                            .font(.system(size: 20, weight: .light))
+                        
+                    }
+                    Divider()
+                        .padding(.bottom, 20)
+                }
+                
+                Group{
+                    HStack(alignment: .top){
+                        Text("Dirección")
+                            .font(.system(size: 20, weight: .semibold))
+                        SecureField("Dirección", text: $direccion)
                             .font(.system(size: 20, weight: .light))
                         
                     }
@@ -100,8 +113,8 @@ struct CambiarDatosView: View {
     }
 }
 
-struct CambiarDatosView_Previews: PreviewProvider {
+struct CambiarFormularioView_Previews: PreviewProvider {
     static var previews: some View {
-        CambiarDatosView()
+        CambiarFormularioView()
     }
 }

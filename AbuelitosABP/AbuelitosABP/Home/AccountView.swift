@@ -74,7 +74,7 @@ struct AccountView: View {
                         .navigationTitle("")
                         .padding(.bottom, 90)
                         
-                        NavigationLink(destination: CambiarDatosView()){
+                        NavigationLink(destination: CambiarFormularioView()){
                             HStack{
                                 Text("Editar Formulario")
                                     .offset(x: -17)
