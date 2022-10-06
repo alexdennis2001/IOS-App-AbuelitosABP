@@ -11,6 +11,7 @@ struct RegistroView: View {
     @State private var cel: String = ""
     @State private var password: String = ""
     @State private var confPassword: String = ""
+    @State private var showPassword = false
     
     @AppStorage("Page") var currentPage: Page?
     
@@ -35,37 +36,41 @@ struct RegistroView: View {
                                 .frame(width: 250)
                                 .offset(x: -50, y: 0)
                         )
-                    VStack(alignment: .leading){
-                        Group{
-                        Text("Teléfono Celular")
-                            .padding(.top, 20)
-                        TextField("Teléfono Celular", text: $cel)
-                                        .frame(width: 350)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .shadow(radius: 5)
-                                        
-                        }
+                        .padding(.bottom, 20)
+                    
+                    VStack(alignment: .leading,spacing: 20){
+                        HStack {
+                            Image(systemName: "phone")
+                                .foregroundColor(.secondary)
+                            TextField("Teléfono Celular",
+                                      text: $cel)
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .frame(width: 350)
+                            .shadow(radius: 5)
                         
-                        Group{
-                        Text("Contraseña")
-                            
-                        SecureField("Contraseña", text: $password)
-                                        .frame(width: 350)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .shadow(radius: 5)
-                        }
+                        HStack {
+                            Image(systemName: "lock")
+                                .foregroundColor(.secondary)
+                            SecureField("Contraseña",
+                                        text: $confPassword)
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .shadow(radius: 5)
                         
-                        Group{
-                        Text("Confirmar Contraseña")
-                            
-                        SecureField("Contraseña", text: $confPassword)
-                                        .frame(width: 350)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .shadow(radius: 5)
-                        }
+                        HStack {
+                            Image(systemName: "lock")
+                                .foregroundColor(.secondary)
+                            SecureField("Comprobar Contraseña",
+                                        text: $confPassword)
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .shadow(radius: 5)
+                        
+                        
                         
                     }
-                    .padding(.bottom, 10)
+                    .frame(width: 350)
                     
                     VStack{
                         Button{

@@ -33,16 +33,18 @@ struct RecuperarContrasenaView: View {
                                 .frame(width: 400)
                                 .offset(x: -10, y: 0)
                         )
+                        .padding(.bottom, 20)
+                    
                     VStack(alignment: .leading){
-                        Group{
-                        Text("Teléfono Celular")
-                            .padding(.top, 20)
-                        TextField("Teléfono Celular", text: $cel)
-                                        .frame(width: 350)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .shadow(radius: 5)
-                                        
-                        }
+                        HStack {
+                            Image(systemName: "phone")
+                                .foregroundColor(.secondary)
+                            TextField("Teléfono Celular",
+                                      text: $cel)
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .frame(width: 350)
+                            .shadow(radius: 5)
                         
                         
                     }

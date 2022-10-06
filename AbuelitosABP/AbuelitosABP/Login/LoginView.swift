@@ -10,6 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @State private var cel: String = ""
     @State private var password: String = ""
+    @State private var showPassword = false
     
     @AppStorage("Page") var currentPage: Page?
     
@@ -34,28 +35,40 @@ struct LoginView: View {
                             }
                                 .offset(x: -70, y: 0)
                         )
-                    VStack(alignment: .leading){
-                        Group{
-                            Text("Teléfono Celular")
-                                .padding(.top, 20)
-                            TextField("Teléfono Celular", text: $cel)
-                                .frame(width: 350)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .shadow(radius: 5)
-                            
-                        }
+                        .padding(.bottom, 20)
+                    
+                    VStack(alignment: .leading,spacing: 20){
+                        HStack {
+                            Image(systemName: "phone")
+                                .foregroundColor(.secondary)
+                            TextField("Teléfono Celular",
+                                      text: $cel)
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .frame(width: 350)
+                            .shadow(radius: 5)
                         
-                        Group{
-                            Text("Contraseña")
-                            
-                            SecureField("Contraseña", text: $password)
-                                .frame(width: 350)
-                                .textFieldStyle(RoundedBorderTextFieldStyle())
-                                .shadow(radius: 5)
-                        }
+                        HStack {
+                            Image(systemName: "lock")
+                                .foregroundColor(.secondary)
+                            if showPassword {
+                                TextField("Contraseña",
+                                          text: $password)
+                            } else {
+                                SecureField("Contraseña",
+                                            text: $password)
+                            }
+                            Button(action: { self.showPassword.toggle()}) {
+                                Image(systemName: "eye")
+                                    .foregroundColor(.secondary)
+                            }
+                        }   .padding()
+                            .background(Capsule().fill(Color.white))
+                            .shadow(radius: 5)
                         
                     }
                     .padding(.bottom, 10)
+                    .frame(width: 350)
                     
                     HStack{
                         
