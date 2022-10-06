@@ -12,6 +12,8 @@ struct RegistroView: View {
     @State private var password: String = ""
     @State private var confPassword: String = ""
     
+    @AppStorage("Page") var currentPage: Page?
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -67,7 +69,7 @@ struct RegistroView: View {
                     
                     VStack{
                         Button{
-                            
+                            currentPage = .formularioPersonal
                         } label: {
                             Text("Crear Cuenta")
                                 .bold()

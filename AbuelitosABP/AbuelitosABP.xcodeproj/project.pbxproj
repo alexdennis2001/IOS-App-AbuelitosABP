@@ -28,6 +28,8 @@
 		1B200FCC28EDEFFA001CC1CF /* FormularioDatosPersonalesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */; };
 		1B200FCD28EDEFFA001CC1CF /* TextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */; };
 		1B200FCE28EDEFFA001CC1CF /* Dropdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC928EDEFFA001CC1CF /* Dropdown.swift */; };
+		1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */; };
+		1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */; };
 		1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */; };
 		1B21A59028CA59210060B598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58F28CA59210060B598 /* ContentView.swift */; };
 		1B21A59228CA59240060B598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21A59128CA59240060B598 /* Assets.xcassets */; };
@@ -65,6 +67,8 @@
 		1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormularioDatosPersonalesView.swift; sourceTree = "<group>"; };
 		1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldView.swift; sourceTree = "<group>"; };
 		1B200FC928EDEFFA001CC1CF /* Dropdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dropdown.swift; sourceTree = "<group>"; };
+		1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarFormularioView.swift; sourceTree = "<group>"; };
+		1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarContrasena2View.swift; sourceTree = "<group>"; };
 		1B21A58A28CA59210060B598 /* AbuelitosABP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbuelitosABP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbuelitosABPApp.swift; sourceTree = "<group>"; };
 		1B21A58F28CA59210060B598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 				1B07624C28DE13D900E6425C /* LoginControllerView.swift */,
 				1B1AFCEF28CABDF500193CCE /* LoginView.swift */,
 				1B1AFCF428CC35C300193CCE /* RegistroView.swift */,
+				1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */,
 				1B1AFCF628CD256F00193CCE /* RecuperarContrasenaView.swift */,
 				1B0A08BC28ED359C00A4B190 /* Launch Screen.storyboard */,
 			);
@@ -200,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */,
+				1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";
@@ -281,6 +287,7 @@
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
+				1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */,
 				1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */,
 				1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */,
 				1B200FCC28EDEFFA001CC1CF /* FormularioDatosPersonalesView.swift in Sources */,
@@ -289,6 +296,7 @@
 				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
 				1B21A59028CA59210060B598 /* ContentView.swift in Sources */,
+				1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */,
 				1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */,
 				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
 				1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */,

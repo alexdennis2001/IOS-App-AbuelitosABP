@@ -19,7 +19,14 @@ struct LoginControllerView: View {
                 MenuView()
             case .congrats:
                 CongratulationsView()
+            case .formularioPersonal:
+                FormularioDatosPersonalesView()
+            case .formularioUbicacion:
+                FormularioDatosPersonalesView()
+            case .recuperarContrasena:
+                RecuperarContrasena2View()
             }
+            
         }
     }
 }

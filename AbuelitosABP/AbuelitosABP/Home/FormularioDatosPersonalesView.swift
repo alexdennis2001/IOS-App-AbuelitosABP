@@ -14,6 +14,7 @@ struct FormularioDatosPersonalesView: View {
     @State private var edad: String = ""
     @State private var estatura: String = ""
     @State private var peso: String = ""
+    @AppStorage("Page") var currentPage: Page?
     let titleFields = ["Nombre", "Apellido Paterno", "Apellido Materno", "Edad", "Sexo", "Estatura (m)", "Peso (kg)", "Tipo de sangre"]
     let labelFields = ["Ej. José Emiliano", "Ej. Garza", "Ej. González", "Ej. 75", "Selecciona", "Ej. 1.70", "Ej. 80", "Selecciona"]
     static var uniqueKey: String {
@@ -95,7 +96,10 @@ struct FormularioDatosPersonalesView: View {
                     )
                     HStack(){
                         Spacer()
-                        NavigationLink(destination: CambiarDatosView()){
+                        
+                        Button {
+                            currentPage = .menu
+                        } label: {
                             Text("Siguiente")
                                 .font(.system(size: 20, weight: .bold))
                                 .foregroundColor(.white)
@@ -104,13 +108,15 @@ struct FormularioDatosPersonalesView: View {
                                         .fill(Color("ButtonColor"))
                                         .frame(width: geo.size.width * 0.35, height: geo.size.height * 0.08)
                                 )
-                            
                         }
+                        
+                        
                     }
                     .frame(width: geo.size.width * 0.75, height: geo.size.height * 0.05)
                     .padding()
                 }
             }
+            .frame(width: 415)
         }
     }
 }

@@ -1,15 +1,14 @@
 //
-//  RecuperarContrasenaView.swift
+//  RecuperarContrasena2View.swift
 //  AbuelitosABP
 //
-//  Created by Alejandro Dennis on 10/09/22.
+//  Created by Alejandro Dennis on 05/10/22.
 //
 
 import SwiftUI
 
-struct RecuperarContrasenaView: View {
+struct RecuperarContrasena2View: View {
     
-    @State private var cel: String = ""
     @AppStorage("Page") var currentPage: Page?
     
     var body: some View {
@@ -27,32 +26,18 @@ struct RecuperarContrasenaView: View {
                                 Spacer()
                                 Text("Recupera tu contraseña").font(.system(size: 30, weight: .bold))
                                     .padding(.bottom, 1)
-                                Text("Introduce tu correo electrónico o celular para recuperar tu cuenta").font(.system(size: 16, weight: .medium))
+                                Text("Se envío un mensaje de texto a su telefono celular. Favor de seguir los pasos para recuperar su contraseña.").font(.system(size: 16, weight: .medium))
                                     
                             }
                                 .frame(width: 400)
                                 .offset(x: -10, y: 0)
                         )
-                    VStack(alignment: .leading){
-                        Group{
-                        Text("Teléfono Celular")
-                            .padding(.top, 20)
-                        TextField("Teléfono Celular", text: $cel)
-                                        .frame(width: 350)
-                                        .textFieldStyle(RoundedBorderTextFieldStyle())
-                                        .shadow(radius: 5)
-                                        
-                        }
-                        
-                        
-                    }
-                    .padding(.bottom, 10)
                     
                     VStack{
                         Button{
-                            currentPage = .recuperarContrasena
+                            currentPage = .login
                         } label: {
-                            Text("Recuperar Contraseña")
+                            Text("Continuar")
                                 .bold()
                                 .foregroundColor(.white)
                                 .background(.black)
@@ -75,8 +60,8 @@ struct RecuperarContrasenaView: View {
     }
 }
 
-struct RecuperarContrasenaView_Previews: PreviewProvider {
+struct RecuperarContrasena2View_Previews: PreviewProvider {
     static var previews: some View {
-        RecuperarContrasenaView()
+        RecuperarContrasena2View()
     }
 }
