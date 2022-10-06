@@ -22,7 +22,7 @@ struct LoginControllerView: View {
             case .formularioPersonal:
                 FormularioDatosPersonalesView()
             case .formularioUbicacion:
-                FormularioDatosPersonalesView()
+                FormularioUbicacionView()
             case .recuperarContrasena:
                 RecuperarContrasena2View()
             }

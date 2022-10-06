@@ -98,7 +98,7 @@ struct FormularioDatosPersonalesView: View {
                         Spacer()
                         
                         Button {
-                            currentPage = .menu
+                            currentPage = .formularioUbicacion
                         } label: {
                             Text("Siguiente")
                                 .font(.system(size: 20, weight: .bold))
@@ -116,7 +116,7 @@ struct FormularioDatosPersonalesView: View {
                     .padding()
                 }
             }
-            .frame(width: 415)
+            .frame(width: geo.size.width * 1, height: geo.size.height * 1)
         }
     }
 }
