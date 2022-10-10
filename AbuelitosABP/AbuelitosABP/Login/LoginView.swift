@@ -15,7 +15,6 @@ struct LoginView: View {
     @AppStorage("Page") var currentPage: Page?
     
     var body: some View {
-        
         NavigationView {
             ZStack {
                 Color("BackgroundColor")
@@ -111,12 +110,12 @@ struct LoginView: View {
                 
             }
         }
-        
     }
 }
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
+            .previewDevice("iPod touch (7th generation)")
     }
 }
