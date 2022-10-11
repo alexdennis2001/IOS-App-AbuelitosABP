@@ -155,7 +155,7 @@ struct HomeView: View {
                                         )
                                 }
                                 
-                                NavigationLink(destination: ActSocialView()){
+                                NavigationLink(destination: AfectividadView()){
                                     Image("afectividad")
                                         .resizable()
                                         .scaledToFill()
