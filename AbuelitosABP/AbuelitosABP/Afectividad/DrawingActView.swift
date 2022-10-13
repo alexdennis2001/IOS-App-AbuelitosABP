@@ -9,18 +9,6 @@ import SwiftUI
 import PencilKit
 
 struct DrawingActView: View {
-    var body: some View {
-        Home()
-    }
-}
-
-struct DrawingActView_Previews: PreviewProvider {
-    static var previews: some View {
-        DrawingActView()
-    }
-}
-
-struct Home : View {
     @State var canvas = PKCanvasView()
     @State var isDraw = true
     @State var color : Color = .black
@@ -42,9 +30,10 @@ struct Home : View {
                     Button(action: {
                         isDraw = false
                     }) {
-                        Image(systemName: "eraser")
+                        Image(systemName: "pencil.slash")
                             .font(.title)
                     }
+                    
                     Menu {
                         
                         Button(action: {
@@ -97,14 +86,15 @@ struct Home : View {
                     } label: {
                         Image(systemName: "pencil.circle")
                             .font(.system(size: 24))
-                            
+                        
                     }
-
+                    
                 })
                 .sheet(isPresented: $colorPicker) {
                     ColorPicker("Escoge un color", selection: $color)
                         .padding()
                 }
+                
             
         }
     }
@@ -113,6 +103,12 @@ struct Home : View {
         let image = canvas.drawing.image(from: canvas.drawing.bounds, scale: 1)
         
         UIImageWriteToSavedPhotosAlbum(image, nil, nil, nil)
+    }
+}
+
+struct DrawingActView_Previews: PreviewProvider {
+    static var previews: some View {
+        DrawingActView()
     }
 }
 

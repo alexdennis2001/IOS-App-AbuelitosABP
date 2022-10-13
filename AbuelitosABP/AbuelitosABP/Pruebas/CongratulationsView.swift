@@ -25,6 +25,16 @@ struct CongratulationsView: View {
                     .font(.system(size: 30, weight: .semibold))
                     .frame(width: 400)
                 
+                HStack{
+                    Text("Estatus:")
+                        .font(.system(size: 28, weight: .medium))
+                    
+                    Text("Aprobado")
+                        .font(.system(size: 28, weight: .medium))
+                        .foregroundColor(.green)
+                        
+                }
+                
                 
                 
                 Button(action: doAnimation, label: {

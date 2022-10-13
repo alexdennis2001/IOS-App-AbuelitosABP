@@ -68,7 +68,7 @@ struct HomeView: View {
                                 .padding(.leading,20)
                             
                             VStack(spacing: 15){
-                                NavigationLink(destination: ActFisicaView()){
+                                NavigationLink(destination: ActMovimientoView()){
                                     Image("running")
                                         .resizable()
                                         .scaledToFill()

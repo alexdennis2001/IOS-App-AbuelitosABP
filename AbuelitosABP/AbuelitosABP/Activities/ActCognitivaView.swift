@@ -62,10 +62,11 @@ struct ActCognitivaView: View {
                     .font(.system(size: 22, weight: .bold))
                 
                 Text("No hay problema nosotros te recomendamos esta aplicación para realizar esta actividad.")
-                    .frame(width: 390)
+                    .frame(width: 380,height: 50)
                     .font(.system(size: 18, weight: .medium))
                     .multilineTextAlignment(.center)
-                    .padding(.bottom, 50)
+                    .padding(.bottom, 20)
+                    
                 
                 
                 

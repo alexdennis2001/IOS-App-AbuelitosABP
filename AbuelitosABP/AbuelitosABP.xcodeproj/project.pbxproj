@@ -38,10 +38,12 @@
 		1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A59828CA59240060B598 /* AbuelitosABP.xcdatamodeld */; };
 		1B2AEEDA28F4C56500FF4E8C /* DrawingActView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2AEED928F4C56500FF4E8C /* DrawingActView.swift */; };
 		1B2AEEDD28F4DBFB00FF4E8C /* AfectividadView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2AEEDC28F4DBFB00FF4E8C /* AfectividadView.swift */; };
+		1B2AEEDF28F5D1AE00FF4E8C /* KeepItUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2AEEDE28F5D1AE00FF4E8C /* KeepItUpView.swift */; };
 		1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9A28E51591003A4EC8 /* Prueba.swift */; };
 		1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */; };
 		1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */; };
 		1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */; };
+		1B700B4428F64457000BC1FA /* ActMovimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B4328F64457000BC1FA /* ActMovimientoView.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
 		8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */; };
 /* End PBXBuildFile section */
@@ -80,10 +82,12 @@
 		1B21A59928CA59240060B598 /* AbuelitosABP.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = AbuelitosABP.xcdatamodel; sourceTree = "<group>"; };
 		1B2AEED928F4C56500FF4E8C /* DrawingActView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingActView.swift; sourceTree = "<group>"; };
 		1B2AEEDC28F4DBFB00FF4E8C /* AfectividadView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AfectividadView.swift; sourceTree = "<group>"; };
+		1B2AEEDE28F5D1AE00FF4E8C /* KeepItUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeepItUpView.swift; sourceTree = "<group>"; };
 		1B4E9E9A28E51591003A4EC8 /* Prueba.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prueba.swift; sourceTree = "<group>"; };
 		1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebaModel.swift; sourceTree = "<group>"; };
 		1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregResp.swift; sourceTree = "<group>"; };
 		1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarDatosView.swift; sourceTree = "<group>"; };
+		1B700B4328F64457000BC1FA /* ActMovimientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActMovimientoView.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioUbicacionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +109,7 @@
 				1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */,
 				1B07625228DE1FA100E6425C /* ActCognitivaView.swift */,
 				1B07625428DEDA1800E6425C /* ActSocialView.swift */,
+				1B700B4328F64457000BC1FA /* ActMovimientoView.swift */,
 			);
 			path = Activities;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 			children = (
 				1B07625928DF9AE200E6425C /* PruebaView.swift */,
 				1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */,
+				1B2AEEDE28F5D1AE00FF4E8C /* KeepItUpView.swift */,
 			);
 			path = Pruebas;
 			sourceTree = "<group>";
@@ -323,10 +329,12 @@
 				1B200FCB28EDEFFA001CC1CF /* DropdownSelector.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
 				1B200FCD28EDEFFA001CC1CF /* TextFieldView.swift in Sources */,
+				1B700B4428F64457000BC1FA /* ActMovimientoView.swift in Sources */,
 				1B2AEEDA28F4C56500FF4E8C /* DrawingActView.swift in Sources */,
 				1B1AFCF928CE3A0300193CCE /* HomeView.swift in Sources */,
 				1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */,
 				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
+				1B2AEEDF28F5D1AE00FF4E8C /* KeepItUpView.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
 				1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */,
 			);
