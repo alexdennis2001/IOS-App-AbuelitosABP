@@ -31,7 +31,6 @@
 		1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */; };
 		1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */; };
 		1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */; };
-		1B21A59028CA59210060B598 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58F28CA59210060B598 /* ContentView.swift */; };
 		1B21A59228CA59240060B598 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21A59128CA59240060B598 /* Assets.xcassets */; };
 		1B21A59528CA59240060B598 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B21A59428CA59240060B598 /* Preview Assets.xcassets */; };
 		1B21A59728CA59240060B598 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A59628CA59240060B598 /* Persistence.swift */; };
@@ -44,6 +43,13 @@
 		1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */; };
 		1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */; };
 		1B700B4428F64457000BC1FA /* ActMovimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B4328F64457000BC1FA /* ActMovimientoView.swift */; };
+		1B700B7528F8F27D000BC1FA /* CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7428F8F27D000BC1FA /* CoreDataClass.swift */; };
+		1B700B7728F8F2BA000BC1FA /* CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7628F8F2BA000BC1FA /* CoreDataProperties.swift */; };
+		1B700B7A28F8F613000BC1FA /* JournalListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7928F8F613000BC1FA /* JournalListView.swift */; };
+		1B700B7C28F9BEA6000BC1FA /* JournalDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7B28F9BEA6000BC1FA /* JournalDetailView.swift */; };
+		1B700B7E28F9BEAF000BC1FA /* JournalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7D28F9BEAF000BC1FA /* JournalRowView.swift */; };
+		1B700B8028F9BEC6000BC1FA /* Satisfaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */; };
+		1B700B8228F9BED7000BC1FA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B8128F9BED7000BC1FA /* Enums.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
 		8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */; };
 /* End PBXBuildFile section */
@@ -75,7 +81,6 @@
 		1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarContrasena2View.swift; sourceTree = "<group>"; };
 		1B21A58A28CA59210060B598 /* AbuelitosABP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbuelitosABP.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbuelitosABPApp.swift; sourceTree = "<group>"; };
-		1B21A58F28CA59210060B598 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1B21A59128CA59240060B598 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1B21A59428CA59240060B598 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		1B21A59628CA59240060B598 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -88,6 +93,13 @@
 		1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PregResp.swift; sourceTree = "<group>"; };
 		1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarDatosView.swift; sourceTree = "<group>"; };
 		1B700B4328F64457000BC1FA /* ActMovimientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActMovimientoView.swift; sourceTree = "<group>"; };
+		1B700B7428F8F27D000BC1FA /* CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataClass.swift; sourceTree = "<group>"; };
+		1B700B7628F8F2BA000BC1FA /* CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataProperties.swift; sourceTree = "<group>"; };
+		1B700B7928F8F613000BC1FA /* JournalListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalListView.swift; sourceTree = "<group>"; };
+		1B700B7B28F9BEA6000BC1FA /* JournalDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalDetailView.swift; sourceTree = "<group>"; };
+		1B700B7D28F9BEAF000BC1FA /* JournalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalRowView.swift; sourceTree = "<group>"; };
+		1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satisfaction.swift; sourceTree = "<group>"; };
+		1B700B8128F9BED7000BC1FA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioUbicacionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -163,6 +175,10 @@
 				1B4E9E9A28E51591003A4EC8 /* Prueba.swift */,
 				1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */,
 				1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */,
+				1B700B7428F8F27D000BC1FA /* CoreDataClass.swift */,
+				1B700B7628F8F2BA000BC1FA /* CoreDataProperties.swift */,
+				1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */,
+				1B700B8128F9BED7000BC1FA /* Enums.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -193,9 +209,9 @@
 				1B07625128DE1DEA00E6425C /* Home */,
 				1B2AEEDB28F4DB4200FF4E8C /* Afectividad */,
 				1B07624F28DE1C6F00E6425C /* Activities */,
+				1B700B7828F8F602000BC1FA /* Journal */,
 				1B07625628DF9A6E00E6425C /* Pruebas */,
 				1B4E9EA028E615EA003A4EC8 /* Account */,
-				1B21A58F28CA59210060B598 /* ContentView.swift */,
 				1B21A59128CA59240060B598 /* Assets.xcassets */,
 				1B21A59628CA59240060B598 /* Persistence.swift */,
 				1B21A59828CA59240060B598 /* AbuelitosABP.xcdatamodeld */,
@@ -228,6 +244,16 @@
 				1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */,
 			);
 			path = Account;
+			sourceTree = "<group>";
+		};
+		1B700B7828F8F602000BC1FA /* Journal */ = {
+			isa = PBXGroup;
+			children = (
+				1B700B7928F8F613000BC1FA /* JournalListView.swift */,
+				1B700B7B28F9BEA6000BC1FA /* JournalDetailView.swift */,
+				1B700B7D28F9BEAF000BC1FA /* JournalRowView.swift */,
+			);
+			path = Journal;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -305,9 +331,13 @@
 				1B2AEEDD28F4DBFB00FF4E8C /* AfectividadView.swift in Sources */,
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
 				1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */,
+				1B700B8228F9BED7000BC1FA /* Enums.swift in Sources */,
+				1B700B7528F8F27D000BC1FA /* CoreDataClass.swift in Sources */,
 				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
+				1B700B7A28F8F613000BC1FA /* JournalListView.swift in Sources */,
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
+				1B700B8028F9BEC6000BC1FA /* Satisfaction.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
 				1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */,
 				1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */,
@@ -317,17 +347,18 @@
 				1B07624D28DE13D900E6425C /* LoginControllerView.swift in Sources */,
 				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
-				1B21A59028CA59210060B598 /* ContentView.swift in Sources */,
 				1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */,
 				1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */,
 				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
 				1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */,
 				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
 				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
+				1B700B7728F8F2BA000BC1FA /* CoreDataProperties.swift in Sources */,
 				1B200FCE28EDEFFA001CC1CF /* Dropdown.swift in Sources */,
 				1B200FC428EDEFD3001CC1CF /* SelectorView.swift in Sources */,
 				1B200FCB28EDEFFA001CC1CF /* DropdownSelector.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,
+				1B700B7E28F9BEAF000BC1FA /* JournalRowView.swift in Sources */,
 				1B200FCD28EDEFFA001CC1CF /* TextFieldView.swift in Sources */,
 				1B700B4428F64457000BC1FA /* ActMovimientoView.swift in Sources */,
 				1B2AEEDA28F4C56500FF4E8C /* DrawingActView.swift in Sources */,
@@ -337,6 +368,7 @@
 				1B2AEEDF28F5D1AE00FF4E8C /* KeepItUpView.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
 				1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */,
+				1B700B7C28F9BEA6000BC1FA /* JournalDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

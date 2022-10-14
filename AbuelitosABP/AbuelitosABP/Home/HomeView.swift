@@ -134,7 +134,7 @@ struct HomeView: View {
                                         )
                                 }
                                 
-                                NavigationLink(destination: ActSocialView()){
+                                NavigationLink(destination: JournalListView()){
                                     Image("healthy")
                                         .resizable()
                                         .scaledToFill()
