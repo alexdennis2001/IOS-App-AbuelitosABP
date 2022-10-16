@@ -20,6 +20,8 @@ struct LoginControllerView: View {
                 MenuView()
             case .congrats:
                 CongratulationsView()
+            case .keepUp:
+                KeepItUpView()
             case .formularioPersonal:
                 FormularioDatosPersonalesView()
             case .formularioUbicacion:
