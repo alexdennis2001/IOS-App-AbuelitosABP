@@ -22,6 +22,7 @@
 		1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFCFE28CFB61600193CCE /* AccountView.swift */; };
 		1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */; };
 		1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */; };
+		1B200D1228FB588C002A8BBF /* FormularioDatosUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */; };
 		1B200FC428EDEFD3001CC1CF /* SelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC328EDEFD3001CC1CF /* SelectorView.swift */; };
 		1B200FCA28EDEFFA001CC1CF /* DropdownRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */; };
 		1B200FCB28EDEFFA001CC1CF /* DropdownSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */; };
@@ -50,6 +51,7 @@
 		1B700B7E28F9BEAF000BC1FA /* JournalRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7D28F9BEAF000BC1FA /* JournalRowView.swift */; };
 		1B700B8028F9BEC6000BC1FA /* Satisfaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */; };
 		1B700B8228F9BED7000BC1FA /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B8128F9BED7000BC1FA /* Enums.swift */; };
+		1B700B8628FB2E82000BC1FA /* FormularioDatosPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B8528FB2E82000BC1FA /* FormularioDatosPersonalView.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
 		8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */; };
 /* End PBXBuildFile section */
@@ -71,6 +73,7 @@
 		1B1AFCFE28CFB61600193CCE /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
 		1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFisicaView.swift; sourceTree = "<group>"; };
 		1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer-ViewModel.swift"; sourceTree = "<group>"; };
+		1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioDatosUbicacionView.swift; sourceTree = "<group>"; };
 		1B200FC328EDEFD3001CC1CF /* SelectorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectorView.swift; sourceTree = "<group>"; };
 		1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownRow.swift; sourceTree = "<group>"; };
 		1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropdownSelector.swift; sourceTree = "<group>"; };
@@ -100,6 +103,7 @@
 		1B700B7D28F9BEAF000BC1FA /* JournalRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalRowView.swift; sourceTree = "<group>"; };
 		1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Satisfaction.swift; sourceTree = "<group>"; };
 		1B700B8128F9BED7000BC1FA /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		1B700B8528FB2E82000BC1FA /* FormularioDatosPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioDatosPersonalView.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioUbicacionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -146,6 +150,7 @@
 				1B200FC528EDEFF9001CC1CF /* DropdownRow.swift */,
 				1B200FC628EDEFF9001CC1CF /* DropdownSelector.swift */,
 				1B200FC728EDEFF9001CC1CF /* FormularioDatosPersonalesView.swift */,
+				1B700B8528FB2E82000BC1FA /* FormularioDatosPersonalView.swift */,
 				8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */,
 				1B200FC828EDEFFA001CC1CF /* TextFieldView.swift */,
 				1B200FC328EDEFD3001CC1CF /* SelectorView.swift */,
@@ -153,6 +158,7 @@
 				1B1AFCFA28CEA43B00193CCE /* MenuView.swift */,
 				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
 				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
+				1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -327,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B200D1228FB588C002A8BBF /* FormularioDatosUbicacionView.swift in Sources */,
 				8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */,
 				1B2AEEDD28F4DBFB00FF4E8C /* AfectividadView.swift in Sources */,
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
@@ -336,6 +343,7 @@
 				1B1AFCFD28CEF64E00193CCE /* PruebasView.swift in Sources */,
 				1B700B7A28F8F613000BC1FA /* JournalListView.swift in Sources */,
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
+				1B700B8628FB2E82000BC1FA /* FormularioDatosPersonalView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B700B8028F9BEC6000BC1FA /* Satisfaction.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,

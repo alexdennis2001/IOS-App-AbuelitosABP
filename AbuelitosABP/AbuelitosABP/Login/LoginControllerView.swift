@@ -21,9 +21,9 @@ struct LoginControllerView: View {
             case .congrats:
                 CongratulationsView()
             case .formularioPersonal:
-                FormularioDatosPersonalesView()
+                FormularioDatosPersonalView()
             case .formularioUbicacion:
-                FormularioUbicacionView()
+                FormularioDatosUbicacionView()
             case .recuperarContrasena:
                 RecuperarContrasena2View()
             }
