@@ -70,12 +70,12 @@ struct PruebasView: View {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Funcionalidad")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0], score: 0.0)) {
                                 Text("ÍNDICE DE KATZ")
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
 
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1], score: 0.0)) {
                                 Text("ÍNDICE DE LAWTON & BRODY")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -90,7 +90,7 @@ struct PruebasView: View {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Afectivo - Calidad de Vida")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[2])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[2], score: 0.0)) {
                                 Text("ESCALA ABREVIADA DE DEPRESIÓN GERIÁTRICA DE YESAVAGE")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -105,7 +105,7 @@ struct PruebasView: View {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Desempeño Físico")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[3])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[3], score: 0.0)) {
                                 Text("ESCALA SARC-F")
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
@@ -116,7 +116,7 @@ struct PruebasView: View {
 //                                    .card(backgroundColor: Color("AmarilloPrueba"))
 //                            }
 
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[4])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[4], score: 0.0)) {
                                 Text("CUESTIONARIO FRAIL PARA DETECCIÓN DE FRAGILIDAD")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }
@@ -131,7 +131,7 @@ struct PruebasView: View {
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Riesgo Social")
                                 .font(.system(size: 26, weight: .semibold))
-                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[5])) {
+                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[5], score: 0.0)) {
                                 Text("ESCALA DE VALORACIÓN SOCIOFAMILIAR DE GIJÓN")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
                             }

@@ -9,9 +9,12 @@ import SwiftUI
 
 struct PruebaView: View {
     let greyButton = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
+    @State var rango = 0.0
+    @State var aprovado = 0.0
     @State var questionNumber = 0
     @AppStorage("Page") var currentPage: Page?
     var prueba: Prueba
+    @State var score = 0.0
     
     var body: some View {
         
@@ -63,14 +66,40 @@ struct PruebaView: View {
                         
                         ForEach(0 ..< prueba.preg_resp[questionNumber].respuesta.count, id: \.self){ respuesta in
                             Button(action:{
+                                score += prueba.preg_resp[questionNumber].respuesta[respuesta].score
+                                prueba.scoreFinal = score
                                 if prueba.preg_resp.count > questionNumber + 1 {
                                     questionNumber += 1
                                 } else {
-                                    currentPage = .congrats
+                                    aprovado = Double(prueba.rangosScore[0].count) / 2.0
+                                    aprovado = aprovado.rounded(.towardZero)
+                                    for i in 0...prueba.rangosScore[0].count-1{
+                                        if(i < prueba.rangosScore[0].count-1){
+                                            if(prueba.scoreFinal >= prueba.rangosScore[0][i] && prueba.scoreFinal < prueba.rangosScore[0][i+1]){
+                                                rango = Double(i+1)
+                                            }
+                                        }
+                                    }
+                                    if(prueba.orden == 1){
+                                        if(rango >= aprovado){
+                                            currentPage = .congrats
+                                        }
+                                        else{
+                                            currentPage = .keepUp
+                                        }
+                                    }
+                                    if(prueba.orden == 0){
+                                        if(rango <= aprovado){
+                                            currentPage = .congrats
+                                        }
+                                        else{
+                                            currentPage = .keepUp
+                                        }
+                                    }
                                 }
                                 
                             },label: {
-                                Text(prueba.preg_resp[questionNumber].respuesta[respuesta])
+                                Text(prueba.preg_resp[questionNumber].respuesta[respuesta].title)
                                     .font(.system(size: 24, weight: .medium))
                                     .minimumScaleFactor(0.1)
                                     .frame(width: 280, height: 70)
@@ -113,11 +142,15 @@ struct PruebaView: View {
 struct PruebaView_Previews: PreviewProvider {
     static var previews: some View {
         PruebaView(prueba: Prueba(nombre: "ÍNDICE DE KATZ", preg_resp: [
-            PregResp(pregunta: "¿Recibe ayuda para bañarse?", respuesta: ["No recibo ayuda","Recibo ayuda con una parte del cuerpo","Recibo ayuda con más de una parte del cuerpo","No me baño"]),
-            PregResp(pregunta: "¿Recibe ayuda para vestirse?", respuesta: ["Me visto solo","Requiero ayuda para los zapatos","Recibo ayuda para la ropa","No me visto"]),
-            PregResp(pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: ["Voy solo y me arreglo","Recibo ayuda para ir y asearse","No voy al servicio"]),
-            PregResp(pregunta: "¿Recibe ayuda para levantarse?", respuesta: ["Me levanto y me acuesto solo","Necesita ayuda","No puedo salir de cama"]),
-            PregResp(pregunta: "¿Recibe ayuda para comer?", respuesta: ["Como solo con cubiertos","Requiero ayuda","Requiero ayuda total","Sonda"]),
-            PregResp(pregunta: "¿Realiza continencias?", respuesta: ["Contiene todo el día y noche","Incontinencia ocasional nocturna","Incontinencia permanente"])]))
+            PregResp(pregunta: "¿Recibe ayuda para bañarse?", respuesta: [Respuesta(title:"No recibo ayuda", score:1.0), Respuesta(title:"Recibo ayuda con una parte del cuerpo", score:0.5), Respuesta(title:"Recibo ayuda con más de una parte del cuerpo", score:0.5), Respuesta(title:"No me baño", score:0.0)]),
+            PregResp(pregunta: "¿Recibe ayuda para vestirse?", respuesta: [Respuesta(title:"Me visto solo", score:1.0), Respuesta(title:"Requiero ayuda para los zapatos", score:0.5), Respuesta(title:"Recibo ayuda para la ropa", score:0.5), Respuesta(title:"No me visto", score:0.0)]),
+            PregResp(pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: [Respuesta(title:"Voy solo y me arreglo", score:1.0),Respuesta(title:"Recibo ayuda para ir y asearse", score:0.5),Respuesta(title:"No voy al servicio", score:0.0)]),
+            PregResp(pregunta: "¿Recibe ayuda para levantarse?", respuesta: [Respuesta(title: "Me levanto y me acuesto solo", score: 1.0),Respuesta(title: "Necesita ayuda", score: 0.5),Respuesta(title: "No puedo salir de cama", score: 0.0)]),
+            PregResp(pregunta: "¿Recibe ayuda para comer?", respuesta: [Respuesta(title: "Como solo con cubiertos", score: 1.0),Respuesta(title: "Requiero ayuda", score: 0.5),Respuesta(title: "Requiero ayuda total", score: 0.0),Respuesta(title: "Sonda", score: 0.0)]),
+            PregResp(pregunta: "¿Practica la continencia?", respuesta: [Respuesta(title: "Contiene todo el día y noche", score: 1.0),Respuesta(title: "Incontinencia ocasional nocturna", score: 0.5),Respuesta(title: "Incontinencia permanente", score: 0.0)])], rangosScore:[[0.0, 2.0, 4.0, 7.0]], orden: 1, categorias: ["Incapacidad severa", "Incapacidad moderada", "Incapacidad leve"], scoreFinal: 0.0))
+        
+        
+        
+        
     }
 }

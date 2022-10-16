@@ -45,6 +45,7 @@
 		1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */; };
 		1B700B4428F64457000BC1FA /* ActMovimientoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B4328F64457000BC1FA /* ActMovimientoView.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
+		8A44478928F86EE400B121F0 /* Respuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A44478828F86EE300B121F0 /* Respuesta.swift */; };
 		8AED3E9528EE7C110040637F /* FormularioUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -89,6 +90,7 @@
 		1B4E9EA128E61613003A4EC8 /* CambiarDatosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarDatosView.swift; sourceTree = "<group>"; };
 		1B700B4328F64457000BC1FA /* ActMovimientoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActMovimientoView.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
+		8A44478828F86EE300B121F0 /* Respuesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respuesta.swift; sourceTree = "<group>"; };
 		8AED3E9428EE7C110040637F /* FormularioUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioUbicacionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -163,6 +165,7 @@
 				1B4E9E9A28E51591003A4EC8 /* Prueba.swift */,
 				1B4E9E9C28E51C52003A4EC8 /* PruebaModel.swift */,
 				1B4E9E9E28E523A4003A4EC8 /* PregResp.swift */,
+				8A44478828F86EE300B121F0 /* Respuesta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
+				8A44478928F86EE400B121F0 /* Respuesta.swift in Sources */,
 				1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */,
 				1B4E9E9B28E51591003A4EC8 /* Prueba.swift in Sources */,
 				1B4E9EA228E61613003A4EC8 /* CambiarDatosView.swift in Sources */,
