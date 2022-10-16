@@ -51,19 +51,37 @@ struct FormularioDatosPersonalView: View {
                         .padding(.bottom, 10)
                     
                     Group{
-                        Text("Nombre")
+                        HStack{
+                            Text("Nombre")
+                                .font(.system(size: 18, weight: .regular))
+                            Text("*")
+                                .foregroundColor(.red)
+                                .font(.system(size: 22, weight: .semibold))
+                        }
                         TextField("Ej. José Emiliano", text: $nombre)
                             .textFieldStyle(.roundedBorder)
                     }
                     
                     Group{
-                        Text("Apellido Paterno")
+                        HStack{
+                            Text("Apellido Paterno")
+                                .font(.system(size: 18, weight: .regular))
+                            Text("*")
+                                .foregroundColor(.red)
+                                .font(.system(size: 22, weight: .semibold))
+                        }
                         TextField("Ej. Garza", text: $apellidoPaterno)
                             .textFieldStyle(.roundedBorder)
                     }
                     
                     Group{
-                        Text("Apellido Materno")
+                        HStack{
+                            Text("Apellido Materno")
+                                .font(.system(size: 18, weight: .regular))
+                            Text("*")
+                                .foregroundColor(.red)
+                                .font(.system(size: 22, weight: .semibold))
+                        }
                         TextField("Ej. González", text: $apellidoMaternto)
                             .textFieldStyle(.roundedBorder)
                     }
@@ -71,7 +89,13 @@ struct FormularioDatosPersonalView: View {
                     HStack{
                         VStack{
                             Group{
-                                Text("Edad")
+                                HStack{
+                                    Text("Edad")
+                                        .font(.system(size: 18, weight: .regular))
+                                    Text("*")
+                                        .foregroundColor(.red)
+                                        .font(.system(size: 22, weight: .semibold))
+                                }
                                 TextField("Ej. 75", text: $edad)
                                     .textFieldStyle(.roundedBorder)
                             }
@@ -79,7 +103,13 @@ struct FormularioDatosPersonalView: View {
                         
                         VStack{
                             Group{
-                                Text("Sexo")
+                                HStack{
+                                    Text("Sexo")
+                                        .font(.system(size: 18, weight: .regular))
+                                    Text("*")
+                                        .foregroundColor(.red)
+                                        .font(.system(size: 22, weight: .semibold))
+                                }
                                 Picker("Sexo", selection: $sexo) {
                                     ForEach(sexos, id: \.self) {
                                         Text($0)
@@ -93,7 +123,13 @@ struct FormularioDatosPersonalView: View {
                     HStack{
                         VStack{
                             Group{
-                                Text("Estatura (m)")
+                                HStack{
+                                    Text("Estatura (m)")
+                                        .font(.system(size: 18, weight: .regular))
+                                    Text("*")
+                                        .foregroundColor(.red)
+                                        .font(.system(size: 22, weight: .semibold))
+                                }
                                 TextField("Ej. 1.70", text: $estatura)
                                     .textFieldStyle(.roundedBorder)
                             }
@@ -101,7 +137,13 @@ struct FormularioDatosPersonalView: View {
                         
                         VStack{
                             Group{
-                                Text("Peso (kg)")
+                                HStack{
+                                    Text("Peso (kg)")
+                                        .font(.system(size: 18, weight: .regular))
+                                    Text("*")
+                                        .foregroundColor(.red)
+                                        .font(.system(size: 22, weight: .semibold))
+                                }
                                 TextField("Ej. 80", text: $peso)
                                     .textFieldStyle(.roundedBorder)
                             }
@@ -109,8 +151,13 @@ struct FormularioDatosPersonalView: View {
                     }
                     
                     Group {
-                        Text("Tipo de sangre")
-                        
+                        HStack{
+                            Text("Tipo de sangre")
+                                .font(.system(size: 18, weight: .regular))
+                            Text("*")
+                                .foregroundColor(.red)
+                                .font(.system(size: 22, weight: .semibold))
+                        }
                         Menu{
                             Picker("Seleccionar", selection: $sangre) {
                                 ForEach(tiposSangre, id: \.self) {

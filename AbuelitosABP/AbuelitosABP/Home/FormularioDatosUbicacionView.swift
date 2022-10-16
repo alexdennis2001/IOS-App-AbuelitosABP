@@ -56,7 +56,13 @@ struct FormularioDatosUbicacionView: View {
                         
                         
                         Group {
-                            Text("Estado")
+                            HStack{
+                                Text("Estado")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             Menu{
                                 Picker("Seleccionar", selection: $estado) {
                                     ForEach(listaEstados, id: \.self) {
@@ -83,7 +89,13 @@ struct FormularioDatosUbicacionView: View {
                         }
                         
                         Group {
-                            Text("Municipio")
+                            HStack{
+                                Text("Municipio")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             Menu{
                                 Picker("Seleccionar", selection: $municipio) {
                                     ForEach(listaMunicipios, id: \.self) {
@@ -109,7 +121,13 @@ struct FormularioDatosUbicacionView: View {
                         }
                         
                         Group {
-                            Text("Zona")
+                            HStack{
+                                Text("Zona")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             Menu{
                                 Picker("Seleccionar", selection: $zona) {
                                     ForEach(listaZona, id: \.self) {
@@ -135,7 +153,13 @@ struct FormularioDatosUbicacionView: View {
                         }
                         
                         Group {
-                            Text("Decanato")
+                            HStack{
+                                Text("Decanato")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             Menu{
                                 Picker("Seleccionar", selection: $decanato) {
                                     ForEach(listaDecanato, id: \.self) {
@@ -161,7 +185,13 @@ struct FormularioDatosUbicacionView: View {
                         }
                         
                         Group {
-                            Text("Parroquia/Capilla")
+                            HStack{
+                                Text("Parroquia/Capilla")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             Menu{
                                 Picker("Seleccionar", selection: $parroquia) {
                                     ForEach(listaParroquias, id: \.self) {
@@ -187,7 +217,13 @@ struct FormularioDatosUbicacionView: View {
                         }
                         
                         Group{
-                            Text("Dirección")
+                            HStack{
+                                Text("Dirección")
+                                    .font(.system(size: 18, weight: .regular))
+                                Text("*")
+                                    .foregroundColor(.red)
+                                    .font(.system(size: 22, weight: .semibold))
+                            }
                             TextField("Ej. Calle, # de Casa y Colonia", text: $direccion)
                                 .textFieldStyle(.roundedBorder)
                         }
