@@ -8,6 +8,13 @@
 import SwiftUI
 
 struct PruebaView: View {
+    @AppStorage("IdPrueba") var idPrueba: Int?
+    @AppStorage("ScorePrueba1") var scorePrueba1: Double?
+    @AppStorage("ScorePrueba2") var scorePrueba2: Double?
+    @AppStorage("ScorePrueba3") var scorePrueba3: Double?
+    @AppStorage("ScorePrueba4") var scorePrueba4: Double?
+    @AppStorage("ScorePrueba5") var scorePrueba5: Double?
+    @AppStorage("ScorePrueba6") var scorePrueba6: Double?
     let greyButton = UIColor(red: 0.85, green: 0.85, blue: 0.85, alpha: 1.00)
     @State var rango = 0.0
     @State var aprovado = 0.0
@@ -81,6 +88,25 @@ struct PruebaView: View {
                                             }
                                         }
                                     }
+                                    idPrueba = prueba.id
+                                    if(prueba.id == 1){
+                                        scorePrueba1 = prueba.scoreFinal
+                                    }
+                                    else if(prueba.id == 2){
+                                        scorePrueba2 = prueba.scoreFinal
+                                    }
+                                    else if(prueba.id == 3){
+                                        scorePrueba3 = prueba.scoreFinal
+                                    }
+                                    else if(prueba.id == 4){
+                                        scorePrueba4 = prueba.scoreFinal
+                                    }
+                                    else if(prueba.id == 5){
+                                        scorePrueba5 = prueba.scoreFinal
+                                    }
+                                    else if(prueba.id == 6){
+                                        scorePrueba6 = prueba.scoreFinal
+                                    }
                                     if(prueba.orden == 1){
                                         if(rango >= aprovado){
                                             currentPage = .congrats
@@ -142,13 +168,13 @@ struct PruebaView: View {
 
 struct PruebaView_Previews: PreviewProvider {
     static var previews: some View {
-        PruebaView(prueba: Prueba(nombre: "ÍNDICE DE KATZ", preg_resp: [
-            PregResp(pregunta: "¿Recibe ayuda para bañarse?", respuesta: [Respuesta(title:"No recibo ayuda", score:1.0), Respuesta(title:"Recibo ayuda con una parte del cuerpo", score:0.5), Respuesta(title:"Recibo ayuda con más de una parte del cuerpo", score:0.5), Respuesta(title:"No me baño", score:0.0)]),
-            PregResp(pregunta: "¿Recibe ayuda para vestirse?", respuesta: [Respuesta(title:"Me visto solo", score:1.0), Respuesta(title:"Requiero ayuda para los zapatos", score:0.5), Respuesta(title:"Recibo ayuda para la ropa", score:0.5), Respuesta(title:"No me visto", score:0.0)]),
-            PregResp(pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: [Respuesta(title:"Voy solo y me arreglo", score:1.0),Respuesta(title:"Recibo ayuda para ir y asearse", score:0.5),Respuesta(title:"No voy al servicio", score:0.0)]),
-            PregResp(pregunta: "¿Recibe ayuda para levantarse?", respuesta: [Respuesta(title: "Me levanto y me acuesto solo", score: 1.0),Respuesta(title: "Necesita ayuda", score: 0.5),Respuesta(title: "No puedo salir de cama", score: 0.0)]),
-            PregResp(pregunta: "¿Recibe ayuda para comer?", respuesta: [Respuesta(title: "Como solo con cubiertos", score: 1.0),Respuesta(title: "Requiero ayuda", score: 0.5),Respuesta(title: "Requiero ayuda total", score: 0.0),Respuesta(title: "Sonda", score: 0.0)]),
-            PregResp(pregunta: "¿Practica la continencia?", respuesta: [Respuesta(title: "Contiene todo el día y noche", score: 1.0),Respuesta(title: "Incontinencia ocasional nocturna", score: 0.5),Respuesta(title: "Incontinencia permanente", score: 0.0)])], rangosScore:[[0.0, 2.0, 4.0, 7.0]], orden: 1, categorias: ["Incapacidad severa", "Incapacidad moderada", "Incapacidad leve"], scoreFinal: 0.0))
+        PruebaView(prueba: Prueba(id: 1, nombre: "ÍNDICE DE KATZ", preg_resp: [
+            PregResp(id: 1, pregunta: "¿Recibe ayuda para bañarse?", respuesta: [Respuesta(title:"No recibo ayuda", score:1.0), Respuesta(title:"Recibo ayuda con una parte del cuerpo", score:0.5), Respuesta(title:"Recibo ayuda con más de una parte del cuerpo", score:0.5), Respuesta(title:"No me baño", score:0.0)]),
+            PregResp(id: 2, pregunta: "¿Recibe ayuda para vestirse?", respuesta: [Respuesta(title:"Me visto solo", score:1.0), Respuesta(title:"Requiero ayuda para los zapatos", score:0.5), Respuesta(title:"Recibo ayuda para la ropa", score:0.5), Respuesta(title:"No me visto", score:0.0)]),
+            PregResp(id: 3, pregunta: "¿Recibe ayuda cuando va al sanitario?", respuesta: [Respuesta(title:"Voy solo y me arreglo", score:1.0),Respuesta(title:"Recibo ayuda para ir y asearse", score:0.5),Respuesta(title:"No voy al servicio", score:0.0)]),
+            PregResp(id: 4, pregunta: "¿Recibe ayuda para levantarse?", respuesta: [Respuesta(title: "Me levanto y me acuesto solo", score: 1.0),Respuesta(title: "Necesita ayuda", score: 0.5),Respuesta(title: "No puedo salir de cama", score: 0.0)]),
+            PregResp(id: 5, pregunta: "¿Recibe ayuda para comer?", respuesta: [Respuesta(title: "Como solo con cubiertos", score: 1.0),Respuesta(title: "Requiero ayuda", score: 0.5),Respuesta(title: "Requiero ayuda total", score: 0.0),Respuesta(title: "Sonda", score: 0.0)]),
+            PregResp(id: 6, pregunta: "¿Practica la continencia?", respuesta: [Respuesta(title: "Contiene todo el día y noche", score: 1.0),Respuesta(title: "Incontinencia ocasional nocturna", score: 0.5),Respuesta(title: "Incontinencia permanente", score: 0.0)])], rangosScore:[[0.0, 2.0, 4.0, 7.0]], orden: 1, categorias: ["Incapacidad severa", "Incapacidad moderada", "Incapacidad leve"], scoreFinal: 0.0))
         
         
         

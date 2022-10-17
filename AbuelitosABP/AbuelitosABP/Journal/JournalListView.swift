@@ -19,7 +19,6 @@ struct JournalListView: View {
     
     
     var body: some View {
-        
         ZStack{
             Color("BackgroundColor")
                 .ignoresSafeArea()
