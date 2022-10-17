@@ -13,6 +13,13 @@ struct CongratulationsView: View {
     @State var finishWish = false
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
+    @AppStorage("IdPrueba") var idPrueba: Int?
+    @AppStorage("ScorePrueba1") var scorePrueba1: Double?
+    @AppStorage("ScorePrueba2") var scorePrueba2: Double?
+    @AppStorage("ScorePrueba3") var scorePrueba3: Double?
+    @AppStorage("ScorePrueba4") var scorePrueba4: Double?
+    @AppStorage("ScorePrueba5") var scorePrueba5: Double?
+    @AppStorage("ScorePrueba6") var scorePrueba6: Double?
     
     let azulClaro = UIColor(red: 0.28, green: 0.71, blue: 1.00, alpha: 1.00)
     
@@ -32,6 +39,25 @@ struct CongratulationsView: View {
                     Text("Aprobado")
                         .font(.system(size: 28, weight: .medium))
                         .foregroundColor(.green)
+                    
+                    if(idPrueba == 1){
+                        Text("\(scorePrueba1!)")
+                    }
+                    else if(idPrueba == 2){
+                        Text("\(scorePrueba2!)")
+                    }
+                    else if(idPrueba == 3){
+                        Text("\(scorePrueba3!)")
+                    }
+                    else if(idPrueba == 4){
+                        Text("\(scorePrueba4!)")
+                    }
+                    else if(idPrueba == 5){
+                        Text("\(scorePrueba5!)")
+                    }
+                    else if(idPrueba == 6){
+                        Text("\(scorePrueba6!)")
+                    }
                         
                 }
                 
