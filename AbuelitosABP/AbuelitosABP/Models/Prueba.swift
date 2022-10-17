@@ -8,7 +8,7 @@
 import SwiftUI
 
 class Prueba: ObservableObject, Identifiable {
-    var id = UUID()
+    var id: Int
     var nombre: String
     var preg_resp: [PregResp]
     var rangosScore: [[Double]]
@@ -16,7 +16,8 @@ class Prueba: ObservableObject, Identifiable {
     var categorias: [String]
     var scoreFinal: Double
     
-    init(nombre: String, preg_resp: [PregResp], rangosScore: [[Double]], orden: Int, categorias: [String], scoreFinal: Double){
+    init(id: Int, nombre: String, preg_resp: [PregResp], rangosScore: [[Double]], orden: Int, categorias: [String], scoreFinal: Double){
+        self.id = id
         self.nombre = nombre
         self.preg_resp = preg_resp
         self.rangosScore = rangosScore

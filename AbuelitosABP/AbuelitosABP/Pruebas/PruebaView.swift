@@ -40,6 +40,7 @@ struct PruebaView: View {
                             .padding(.bottom, 5)
                         
                         Text("2. Dar click en su respuesta hasta completar el cuestionario.")
+                        
                     }
                     .frame(width: 300, height: 80)
                     .multilineTextAlignment(.leading)

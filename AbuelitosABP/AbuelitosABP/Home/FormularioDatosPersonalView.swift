@@ -90,7 +90,7 @@ struct FormularioDatosPersonalView: View {
                         VStack{
                             Group{
                                 HStack{
-                                    Text("Edad")
+                                    Text("Fecha de Nacimiento")
                                         .font(.system(size: 18, weight: .regular))
                                     Text("*")
                                         .foregroundColor(.red)

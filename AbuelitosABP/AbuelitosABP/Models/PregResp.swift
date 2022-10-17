@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PregResp: Identifiable {
-    var id = UUID()
+    var id: Int
     var pregunta: String
     var respuesta: [Respuesta]
     

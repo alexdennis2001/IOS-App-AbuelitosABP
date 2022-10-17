@@ -23,6 +23,10 @@
 		1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */; };
 		1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */; };
 		1B200D1228FB588C002A8BBF /* FormularioDatosUbicacionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */; };
+		1B200D1828FDADF7002A8BBF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1B200D1728FDADF7002A8BBF /* Alamofire */; };
+		1B200D1B28FDAE28002A8BBF /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 1B200D1A28FDAE28002A8BBF /* SwiftyJSON */; };
+		1B200D1D28FDAE90002A8BBF /* usuarioModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200D1C28FDAE90002A8BBF /* usuarioModel.swift */; };
+		1B200D1F28FDAEBE002A8BBF /* usuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200D1E28FDAEBE002A8BBF /* usuario.swift */; };
 		1B200FD028EE5AF0001CC1CF /* CambiarFormularioView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */; };
 		1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */; };
 		1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B21A58D28CA59210060B598 /* AbuelitosABPApp.swift */; };
@@ -68,6 +72,8 @@
 		1B1AFD0228D24A2800193CCE /* ActFisicaView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActFisicaView.swift; sourceTree = "<group>"; };
 		1B1AFD0428D2AB1500193CCE /* Timer-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Timer-ViewModel.swift"; sourceTree = "<group>"; };
 		1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioDatosUbicacionView.swift; sourceTree = "<group>"; };
+		1B200D1C28FDAE90002A8BBF /* usuarioModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuarioModel.swift; sourceTree = "<group>"; };
+		1B200D1E28FDAEBE002A8BBF /* usuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = usuario.swift; sourceTree = "<group>"; };
 		1B200FCF28EE5AF0001CC1CF /* CambiarFormularioView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CambiarFormularioView.swift; sourceTree = "<group>"; };
 		1B200FD128EE6157001CC1CF /* RecuperarContrasena2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecuperarContrasena2View.swift; sourceTree = "<group>"; };
 		1B21A58A28CA59210060B598 /* AbuelitosABP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AbuelitosABP.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -101,6 +107,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B200D1B28FDAE28002A8BBF /* SwiftyJSON in Frameworks */,
+				1B200D1828FDADF7002A8BBF /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -167,6 +175,8 @@
 				1B700B7628F8F2BA000BC1FA /* CoreDataProperties.swift */,
 				1B700B7F28F9BEC6000BC1FA /* Satisfaction.swift */,
 				1B700B8128F9BED7000BC1FA /* Enums.swift */,
+				1B200D1C28FDAE90002A8BBF /* usuarioModel.swift */,
+				1B200D1E28FDAEBE002A8BBF /* usuario.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -260,6 +270,10 @@
 			dependencies = (
 			);
 			name = AbuelitosABP;
+			packageProductDependencies = (
+				1B200D1728FDADF7002A8BBF /* Alamofire */,
+				1B200D1A28FDAE28002A8BBF /* SwiftyJSON */,
+			);
 			productName = AbuelitosABP;
 			productReference = 1B21A58A28CA59210060B598 /* AbuelitosABP.app */;
 			productType = "com.apple.product-type.application";
@@ -288,6 +302,10 @@
 				Base,
 			);
 			mainGroup = 1B21A58128CA59210060B598;
+			packageReferences = (
+				1B200D1628FDADF7002A8BBF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				1B200D1928FDAE28002A8BBF /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+			);
 			productRefGroup = 1B21A58B28CA59210060B598 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,6 +333,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B200D1F28FDAEBE002A8BBF /* usuario.swift in Sources */,
 				1B200D1228FB588C002A8BBF /* FormularioDatosUbicacionView.swift in Sources */,
 				1B2AEEDD28F4DBFB00FF4E8C /* AfectividadView.swift in Sources */,
 				1B21A59A28CA59240060B598 /* AbuelitosABP.xcdatamodeld in Sources */,
@@ -350,6 +369,7 @@
 				1B07625A28DF9AE200E6425C /* PruebaView.swift in Sources */,
 				1B1AFCF028CABDF500193CCE /* LoginView.swift in Sources */,
 				1B2AEEDF28F5D1AE00FF4E8C /* KeepItUpView.swift in Sources */,
+				1B200D1D28FDAE90002A8BBF /* usuarioModel.swift in Sources */,
 				1B21A58E28CA59210060B598 /* AbuelitosABPApp.swift in Sources */,
 				1B4E9E9F28E523A4003A4EC8 /* PregResp.swift in Sources */,
 				1B700B7C28F9BEA6000BC1FA /* JournalDetailView.swift in Sources */,
@@ -565,6 +585,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B200D1628FDADF7002A8BBF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		1B200D1928FDAE28002A8BBF /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B200D1728FDADF7002A8BBF /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B200D1628FDADF7002A8BBF /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		1B200D1A28FDAE28002A8BBF /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B200D1928FDAE28002A8BBF /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		1B21A59828CA59240060B598 /* AbuelitosABP.xcdatamodeld */ = {
