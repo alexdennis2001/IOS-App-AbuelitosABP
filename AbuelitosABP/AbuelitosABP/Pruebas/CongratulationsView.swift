@@ -7,6 +7,28 @@
 
 import SwiftUI
 
+struct Score: ViewModifier{
+    let backgroundColor: Color
+    func body(content: Content) -> some View {
+        content
+            .font(.system(size: 50, weight: .medium))
+            .frame(width: 100, height: 100)
+            .background(
+                Circle()
+                    .strokeBorder(.black, lineWidth: 6)
+                    .background(Circle().foregroundColor(backgroundColor))
+                    .frame(width: 150, height: 150)
+            )
+            .padding(.bottom, 40)
+    }
+}
+
+extension View {
+    func scoreStyle(backgroundColor: Color = Color.green) -> some View {
+        modifier(Score(backgroundColor: backgroundColor))
+    }
+}
+
 struct CongratulationsView: View {
     
     @State var wish = false
@@ -14,6 +36,7 @@ struct CongratulationsView: View {
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
     @AppStorage("IdPrueba") var idPrueba: Int?
+    @AppStorage("Categoria") var categoriaPrueba: String?
     @AppStorage("ScorePrueba1") var scorePrueba1: Double?
     @AppStorage("ScorePrueba2") var scorePrueba2: Double?
     @AppStorage("ScorePrueba3") var scorePrueba3: Double?
@@ -39,55 +62,67 @@ struct CongratulationsView: View {
                     Text("Aprobado")
                         .font(.system(size: 28, weight: .medium))
                         .foregroundColor(.green)
+                }
+                .padding()
+                
+                VStack(){
                     
                     if(idPrueba == 1){
-                        Text("\(scorePrueba1!)")
+                        Text(String(format: "%.1f", scorePrueba1!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
                     else if(idPrueba == 2){
-                        Text("\(scorePrueba2!)")
+                        Text(String(format: "%.1f", scorePrueba2!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
                     else if(idPrueba == 3){
-                        Text("\(scorePrueba3!)")
+                        Text(String(format: "%.1f", scorePrueba3!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
                     else if(idPrueba == 4){
-                        Text("\(scorePrueba4!)")
+                        Text(String(format: "%.1f", scorePrueba4!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
                     else if(idPrueba == 5){
-                        Text("\(scorePrueba5!)")
+                        Text(String(format: "%.1f", scorePrueba5!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
                     else if(idPrueba == 6){
-                        Text("\(scorePrueba6!)")
+                        Text(String(format: "%.1f", scorePrueba6!))
+                            .scoreStyle(backgroundColor: Color.green)
                     }
-                        
-                }
-                
-                
-                
-                Button(action: doAnimation, label: {
-                    Image("happy-couple")
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .frame(width: 480)
                     
-                })
-                .disabled(wish)
-                
-                
-                
-                Button {
-                    tabSelection = 2
-                    currentPage = .menu
-                } label: {
-                    Text("Continuar")
-                        .kerning(2)
-                        .padding(.vertical, 12)
-                        .padding(.horizontal, 50)
-                        .background(Color(azulClaro))
-                        .clipShape(Capsule())
-                        .foregroundColor(.black)
-                        .font(.system(size: 24, weight: .medium))
+                    if let unwrappedCategoria = categoriaPrueba{
+                        Text(unwrappedCategoria)
+                            .font(.system(size: 28, weight: .bold))
+                    }
+                    
+                    Button(action: doAnimation, label: {
+                        Image("happy-couple")
+                            .resizable()
+                            .scaledToFit()
+                            .aspectRatio(contentMode: .fit)
+                            .frame(width: 480)
+                        
+                    })
+                    .disabled(wish)
+                    
+                    Button {
+                        tabSelection = 2
+                        currentPage = .menu
+                    } label: {
+                        Text("Continuar")
+                            .kerning(2)
+                            .padding(.vertical, 12)
+                            .padding(.horizontal, 50)
+                            .background(Color(azulClaro))
+                            .clipShape(Capsule())
+                            .foregroundColor(.black)
+                            .font(.system(size: 24, weight: .medium))
+                    }
                 }
-
+                .padding()
+                
             }
             
             EmitterView()
