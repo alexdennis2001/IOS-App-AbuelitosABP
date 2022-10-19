@@ -12,6 +12,7 @@ struct KeepItUpView: View {
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
     @AppStorage("IdPrueba") var idPrueba: Int?
+    @AppStorage("Categoria") var categoriaPrueba: String?
     @AppStorage("ScorePrueba1") var scorePrueba1: Double?
     @AppStorage("ScorePrueba2") var scorePrueba2: Double?
     @AppStorage("ScorePrueba3") var scorePrueba3: Double?
@@ -35,27 +36,42 @@ struct KeepItUpView: View {
                     Text("Reprobado")
                         .font(.system(size: 28, weight: .medium))
                         .foregroundColor(.red)
-                    
+                }
+                .padding()
+                
+                VStack{
                     if(idPrueba == 1){
-                        Text("\(scorePrueba1!)")
+                        Text(String(format: "%.1f", scorePrueba1!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
                     else if(idPrueba == 2){
-                        Text("\(scorePrueba2!)")
+                        Text(String(format: "%.1f", scorePrueba2!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
                     else if(idPrueba == 3){
-                        Text("\(scorePrueba3!)")
+                        Text(String(format: "%.1f", scorePrueba3!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
                     else if(idPrueba == 4){
-                        Text("\(scorePrueba4!)")
+                        Text(String(format: "%.1f", scorePrueba4!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
                     else if(idPrueba == 5){
-                        Text("\(scorePrueba5!)")
+                        Text(String(format: "%.1f", scorePrueba5!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
                     else if(idPrueba == 6){
-                        Text("\(scorePrueba6!)")
+                        Text(String(format: "%.1f", scorePrueba6!))
+                            .scoreStyle(backgroundColor: Color.red)
                     }
-                        
+                    
+                    if let unwrappedCategoria = categoriaPrueba{
+                        Text(unwrappedCategoria)
+                            .font(.system(size: 28, weight: .bold))
+                    }
+
                 }
+                .padding()
                 
                 Image("upset")
                     .resizable()

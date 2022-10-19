@@ -9,6 +9,7 @@ import SwiftUI
 
 struct PruebaView: View {
     @AppStorage("IdPrueba") var idPrueba: Int?
+    @AppStorage("Categoria") var categoriaPrueba: String?
     @AppStorage("ScorePrueba1") var scorePrueba1: Double?
     @AppStorage("ScorePrueba2") var scorePrueba2: Double?
     @AppStorage("ScorePrueba3") var scorePrueba3: Double?
@@ -85,27 +86,28 @@ struct PruebaView: View {
                                         if(i < prueba.rangosScore[0].count-1){
                                             if(prueba.scoreFinal >= prueba.rangosScore[0][i] && prueba.scoreFinal < prueba.rangosScore[0][i+1]){
                                                 rango = Double(i+1)
+                                                categoriaPrueba = prueba.categorias[i];
                                             }
                                         }
                                     }
                                     idPrueba = prueba.id
                                     if(prueba.id == 1){
-                                        scorePrueba1 = prueba.scoreFinal
+                                        scorePrueba1 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 2){
-                                        scorePrueba2 = prueba.scoreFinal
+                                        scorePrueba2 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 3){
-                                        scorePrueba3 = prueba.scoreFinal
+                                        scorePrueba3 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 4){
-                                        scorePrueba4 = prueba.scoreFinal
+                                        scorePrueba4 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 5){
-                                        scorePrueba5 = prueba.scoreFinal
+                                        scorePrueba5 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 6){
-                                        scorePrueba6 = prueba.scoreFinal
+                                        scorePrueba6 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     if(prueba.orden == 1){
                                         if(rango >= aprovado){
