@@ -6,8 +6,12 @@
 //
 
 import SwiftUI
+import Alamofire
+import SwiftyJSON
 
 struct HomeView: View {
+    @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name")!
+    
     var body: some View {
         NavigationView {
             ZStack {
@@ -19,7 +23,7 @@ struct HomeView: View {
                         Image("logo_abuelitos")
                             .scaledToFit()
                             .padding(.bottom, 0)
-                        Text("Bienvenido, NOMBRE!")
+                        Text("Bienvenido, \(first_name)!")
                             .font(.system(size: 24, weight: .medium))
                             .padding(.bottom, 1)
                     }
@@ -185,7 +189,28 @@ struct HomeView: View {
                 
             }
         }
+        .onAppear(perform: LoadData)
         
+    }
+    
+    func LoadData() {
+        let defaults = UserDefaults.standard
+        let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
+        let headers: HTTPHeaders = ["accept": "application/json",
+                                    "Authorization": "Bearer " + token!]
+        
+        AF.request("http://172.104.198.169:8000/api/patients/me", method: .get, encoding: URLEncoding.default, headers: headers).responseData { response in
+            
+            //            let json = try! JSON(data: data.data!)
+            //            print(json)
+            
+            guard let data = response.data else { return }
+            let user = try! JSONDecoder().decode(LoadAllData.self, from: data)
+    
+            defaults.setValue(user.first_name, forKey: "first_name")
+            
+            
+        }
         
     }
     

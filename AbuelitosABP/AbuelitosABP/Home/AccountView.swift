@@ -6,10 +6,18 @@
 //
 
 import SwiftUI
+import Alamofire
+import SwiftyJSON
 
 struct AccountView: View {
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
+    
+    @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name")!
+    @State private var last_name: String = UserDefaults.standard.string(forKey: "last_name")!
+    @State private var birth_date: String = UserDefaults.standard.string(forKey: "birth_date")!
+    @State private var decanato: String = UserDefaults.standard.string(forKey: "decanato")!
+    @State private var parroquia: String = UserDefaults.standard.string(forKey: "parroquia")!
     
     var body: some View {
         NavigationView{
@@ -32,13 +40,13 @@ struct AccountView: View {
                     
                     VStack(alignment: .leading, spacing: 5){
                         Group{
-                            Text("Alberto Gonzalez")
+                            Text("\(first_name) \(last_name)")
                                 .font(.system(size: 34, weight: .bold))
-                            Text("Edad:")
+                            Text("Fecha de Nacimiento: \(birth_date)")
                                 .font(.system(size: 20, weight: .medium))
-                            Text("Ubicación:")
+                            Text("Decanato: \(decanato)")
                                 .font(.system(size: 20, weight: .medium))
-                            Text("Parroquia:")
+                            Text("Parroquia: \(parroquia)")
                                 .font(.system(size: 20, weight: .medium))
                         }
                         
@@ -99,6 +107,8 @@ struct AccountView: View {
                         Button {
                             tabSelection = 1
                             currentPage = .login
+                            UserDefaults.resetStandardUserDefaults()
+                            
                         } label: {
                             
                             HStack{
@@ -126,8 +136,36 @@ struct AccountView: View {
                 
             }
             
-        }
+        }.onAppear(perform: LoadData)
     }
+    func LoadData() {
+        let defaults = UserDefaults.standard
+        let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
+        let headers: HTTPHeaders = ["accept": "application/json",
+                                    "Authorization": "Bearer " + token!]
+        
+        AF.request("http://172.104.198.169:8000/api/patients/me", method: .get, encoding: URLEncoding.default, headers: headers).responseData { response in
+            
+            //            let json = try! JSON(data: data.data!)
+            //            print(json)
+            
+            guard let data = response.data else { return }
+            let user = try! JSONDecoder().decode(LoadAllData.self, from: data)
+            print(user.first_name)
+            print(user.last_name)
+            print(user.birth_date)
+    
+            defaults.setValue(user.first_name, forKey: "first_name")
+            defaults.setValue(user.last_name, forKey: "last_name")
+            defaults.setValue(user.birth_date, forKey: "birth_date")
+            defaults.setValue(user.patient_info.decanato, forKey: "decanato")
+            defaults.setValue(user.patient_info.parroquia, forKey: "parroquia")
+            
+            
+        }
+        
+    }
+    
 }
 
 struct AccountView_Previews: PreviewProvider {
