@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var cel: String = ""
-    @State private var password: String = ""
+    
     @State private var showPassword = false
+    @State private var loginVM = LoginViewModel()
+    @State private var incorrectPassword = false
     
     @AppStorage("Page") var currentPage: Page?
     
@@ -41,7 +42,7 @@ struct LoginView: View {
                             Image(systemName: "phone")
                                 .foregroundColor(.secondary)
                             TextField("Teléfono Celular",
-                                      text: $cel)
+                                      text: $loginVM.username)
                         }   .padding()
                             .background(Capsule().fill(Color.white))
                             .frame(width: 350)
@@ -52,10 +53,12 @@ struct LoginView: View {
                                 .foregroundColor(.secondary)
                             if showPassword {
                                 TextField("Contraseña",
-                                          text: $password)
+                                          text: $loginVM.password)
+                                .autocapitalization(.none)
                             } else {
                                 SecureField("Contraseña",
-                                            text: $password)
+                                            text: $loginVM.password)
+                                .autocapitalization(.none)
                             }
                             Button(action: { self.showPassword.toggle()}) {
                                 Image(systemName: "eye")
@@ -84,11 +87,26 @@ struct LoginView: View {
                         }
                         .navigationTitle("")
                         
+                        
                     }
                     
                     VStack{
+                        if incorrectPassword {
+                            Text("Teléfono o contraseña incorrecta")
+                                .foregroundColor(.red)
+                                .bold()
+                        }
+                        
                         Button {
-                            currentPage = .menu
+                            loginVM.login()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                                if loginVM.isAuthenticated {
+                                    currentPage = .menu
+                                } else {
+                                    incorrectPassword = true
+                                }
+                            }
+                            
                         } label: {
                             Text("Iniciar Sesión")
                                 .bold()
@@ -116,6 +134,6 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView()
-            .previewDevice("iPod touch (7th generation)")
+            .previewDevice("iPhone 11")
     }
 }

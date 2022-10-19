@@ -10,19 +10,32 @@ import SwiftUI
 struct FormularioDatosPersonalView: View {
     @State private var nombre: String = ""
     @State private var apellidoPaterno: String = ""
-    @State private var apellidoMaternto: String = ""
-    @State private var edad: String = ""
-    @State private var estatura: String = ""
-    @State private var peso: String = ""
-    @State private var sexo: String = "Hombre"
-    @State private var sangre: String = ""
+    @State private var apellidoMaterno: String = ""
+    @State private var fecha_nacimiento = Date()
+    @State private var estatura: Double = 0.0
+    @State private var peso: Double = 0.0
+    @State private var selectedSex = 1
+    @State private var selectedSangre = 9
+    @State private var patientInfo = PatientInfoModel()
     
-    var sexos = ["Hombre", "Mujer"]
-    var tiposSangre = ["O-","O+","AB-","AB+","B-","B+","A-","A+"]
+    
+    var tiposSangre = ["A+","A-","B+","B-","AB+","AB-","O+","O-"]
     
     @AppStorage("Page") var currentPage: Page?
     
     let azulCaja = UIColor(red: 0.62, green: 0.74, blue: 0.89, alpha: 1.00)
+    
+    let dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        return formatter
+    }()
+    
+    let formatter: NumberFormatter = {
+            let formatter = NumberFormatter()
+            formatter.numberStyle = .decimal
+            return formatter
+        }()
     
     var body: some View {
         ZStack(alignment: .top){
@@ -82,7 +95,7 @@ struct FormularioDatosPersonalView: View {
                                 .foregroundColor(.red)
                                 .font(.system(size: 22, weight: .semibold))
                         }
-                        TextField("Ej. González", text: $apellidoMaternto)
+                        TextField("Ej. González", text: $apellidoMaterno)
                             .textFieldStyle(.roundedBorder)
                     }
                     
@@ -92,12 +105,16 @@ struct FormularioDatosPersonalView: View {
                                 HStack{
                                     Text("Fecha de Nacimiento")
                                         .font(.system(size: 18, weight: .regular))
+                                        .frame(width: 170, height: 40)
                                     Text("*")
                                         .foregroundColor(.red)
                                         .font(.system(size: 22, weight: .semibold))
+                                        .frame(width: 10)
                                 }
-                                TextField("Ej. 75", text: $edad)
-                                    .textFieldStyle(.roundedBorder)
+                                DatePicker(selection: $fecha_nacimiento, in: ...Date(), displayedComponents: .date){
+                                    Text("")
+                                }
+                                .offset(x: -25, y: -5)
                             }
                         }
                         
@@ -110,11 +127,10 @@ struct FormularioDatosPersonalView: View {
                                         .foregroundColor(.red)
                                         .font(.system(size: 22, weight: .semibold))
                                 }
-                                Picker("Sexo", selection: $sexo) {
-                                    ForEach(sexos, id: \.self) {
-                                        Text($0)
-                                    }
-                                }
+                                Picker("Sexo", selection: $selectedSex, content: {
+                                    Text("Hombre").tag(1)
+                                    Text("Mujer").tag(2)
+                                })
                                 .pickerStyle(.segmented)
                             }
                         }
@@ -130,7 +146,7 @@ struct FormularioDatosPersonalView: View {
                                         .foregroundColor(.red)
                                         .font(.system(size: 22, weight: .semibold))
                                 }
-                                TextField("Ej. 1.70", text: $estatura)
+                                TextField("Ej. 1.70", value: $estatura, formatter: formatter)
                                     .textFieldStyle(.roundedBorder)
                             }
                         }
@@ -144,7 +160,7 @@ struct FormularioDatosPersonalView: View {
                                         .foregroundColor(.red)
                                         .font(.system(size: 22, weight: .semibold))
                                 }
-                                TextField("Ej. 80", text: $peso)
+                                TextField("Ej. 80", value: $peso, formatter: formatter)
                                     .textFieldStyle(.roundedBorder)
                             }
                         }
@@ -158,17 +174,23 @@ struct FormularioDatosPersonalView: View {
                                 .foregroundColor(.red)
                                 .font(.system(size: 22, weight: .semibold))
                         }
+                        
                         Menu{
-                            Picker("Seleccionar", selection: $sangre) {
-                                ForEach(tiposSangre, id: \.self) {
-                                    Text($0)
-                                }
+                            Picker("Seleccionar", selection: $selectedSangre) {
+                                Text("O-").tag(7)
+                                Text("O+").tag(6)
+                                Text("AB-").tag(5)
+                                Text("AB+").tag(4)
+                                Text("B-").tag(3)
+                                Text("B+").tag(2)
+                                Text("A-").tag(1)
+                                Text("A+").tag(0)
                             }
                         } label: {
-                            if sangre == "" {
+                            if selectedSangre == 9 {
                                 Text("Seleccionar")
                             } else {
-                                Text("\(sangre)")
+                                Text("\(tiposSangre[selectedSangre])")
                             }
                         }
                         .padding(.horizontal)
@@ -209,6 +231,7 @@ struct FormularioDatosPersonalView: View {
                     Spacer()
                     
                     Button {
+                        patientInfo.postMethod(first_name: nombre, last_name: apellidoPaterno, second_last_name: apellidoMaterno, gender: selectedSex, birth_date: dateFormatter.string(from: fecha_nacimiento), height: estatura, weight: peso, blood_type: selectedSangre)
                         currentPage = .formularioUbicacion
                     } label: {
                         Text("Siguiente")

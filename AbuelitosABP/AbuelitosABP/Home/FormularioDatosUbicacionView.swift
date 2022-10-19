@@ -14,6 +14,7 @@ struct FormularioDatosUbicacionView: View {
     @State private var decanato: String = ""
     @State private var parroquia: String = ""
     @State private var direccion: String = ""
+    @State private var patientInfo = PatientInfo2Model()
     
     var listaEstados = ["Aguascalientes","Baja California","Baja California Sur","Campeche","Ciudad de México", "Nuevo León","Oaxaca","Puebla","Sinaloa","Sonora"]
     
@@ -254,6 +255,7 @@ struct FormularioDatosUbicacionView: View {
                         Spacer()
                         
                         Button {
+                            patientInfo.postMethod(estado: estado, municipio: municipio, decanato: decanato, parroquia: parroquia, zona: zona, direccion: direccion)
                             currentPage = .menu
                         } label: {
                             Text("Siguiente")
