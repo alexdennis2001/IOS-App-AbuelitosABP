@@ -105,9 +105,11 @@ struct AccountView: View {
                       
                         
                         Button {
+                            
+                            UserDefaults.resetStandardUserDefaults()
                             tabSelection = 1
                             currentPage = .login
-                            UserDefaults.resetStandardUserDefaults()
+                            
                             
                         } label: {
                             
