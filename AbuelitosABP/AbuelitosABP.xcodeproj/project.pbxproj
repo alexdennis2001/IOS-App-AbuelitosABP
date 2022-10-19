@@ -52,6 +52,7 @@
 		1B700B8628FB2E82000BC1FA /* FormularioDatosPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B700B8528FB2E82000BC1FA /* FormularioDatosPersonalView.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
 		8A16625C28FC7C1300341DAF /* Respuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16625B28FC7C1300341DAF /* Respuesta.swift */; };
+		8A166262290067EE00341DAF /* ResultadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A166261290067EE00341DAF /* ResultadosView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -100,6 +101,7 @@
 		1B700B8528FB2E82000BC1FA /* FormularioDatosPersonalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormularioDatosPersonalView.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		8A16625B28FC7C1300341DAF /* Respuesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respuesta.swift; sourceTree = "<group>"; };
+		8A166261290067EE00341DAF /* ResultadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 				1B1AFCFC28CEF64E00193CCE /* PruebasView.swift */,
 				1B1AFCFE28CFB61600193CCE /* AccountView.swift */,
 				1B200D1128FB588C002A8BBF /* FormularioDatosUbicacionView.swift */,
+				8A166261290067EE00341DAF /* ResultadosView.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				1B700B7A28F8F613000BC1FA /* JournalListView.swift in Sources */,
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
 				1B700B8628FB2E82000BC1FA /* FormularioDatosPersonalView.swift in Sources */,
+				8A166262290067EE00341DAF /* ResultadosView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,
 				1B700B8028F9BEC6000BC1FA /* Satisfaction.swift in Sources */,
 				1B1AFCF528CC35C300193CCE /* RegistroView.swift in Sources */,
