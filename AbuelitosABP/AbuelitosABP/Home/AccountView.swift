@@ -12,6 +12,12 @@ import SwiftyJSON
 struct AccountView: View {
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
+    @AppStorage("ScorePrueba1") var scorePrueba1: Double?
+    @AppStorage("ScorePrueba2") var scorePrueba2: Double?
+    @AppStorage("ScorePrueba3") var scorePrueba3: Double?
+    @AppStorage("ScorePrueba4") var scorePrueba4: Double?
+    @AppStorage("ScorePrueba5") var scorePrueba5: Double?
+    @AppStorage("ScorePrueba6") var scorePrueba6: Double?
     
     @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name") ?? "string"
     @State private var last_name: String = UserDefaults.standard.string(forKey: "last_name") ?? "string"
@@ -108,7 +114,12 @@ struct AccountView: View {
                             tabSelection = 1
                             currentPage = .login
                             UserDefaults.resetStandardUserDefaults()
-                            
+                            scorePrueba1 = nil
+                            scorePrueba2 = nil
+                            scorePrueba3 = nil
+                            scorePrueba4 = nil
+                            scorePrueba5 = nil
+                            scorePrueba6 = nil
                             
                         } label: {
                             
