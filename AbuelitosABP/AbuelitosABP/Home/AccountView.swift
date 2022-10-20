@@ -13,11 +13,11 @@ struct AccountView: View {
     @AppStorage("Page") var currentPage: Page?
     @AppStorage("Menu") var tabSelection: Int?
     
-    @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name")!
-    @State private var last_name: String = UserDefaults.standard.string(forKey: "last_name")!
-    @State private var birth_date: String = UserDefaults.standard.string(forKey: "birth_date")!
-    @State private var decanato: String = UserDefaults.standard.string(forKey: "decanato")!
-    @State private var parroquia: String = UserDefaults.standard.string(forKey: "parroquia")!
+    @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name") ?? "string"
+    @State private var last_name: String = UserDefaults.standard.string(forKey: "last_name") ?? "string"
+    @State private var birth_date: String = UserDefaults.standard.string(forKey: "birth_date") ?? "2022-10-20"
+    @State private var decanato: String = UserDefaults.standard.string(forKey: "decanato") ?? "string"
+    @State private var parroquia: String = UserDefaults.standard.string(forKey: "parroquia") ?? "string"
     
     var body: some View {
         NavigationView{
@@ -105,10 +105,9 @@ struct AccountView: View {
                       
                         
                         Button {
-                            
-                            UserDefaults.resetStandardUserDefaults()
                             tabSelection = 1
                             currentPage = .login
+                            UserDefaults.resetStandardUserDefaults()
                             
                             
                         } label: {
@@ -153,9 +152,9 @@ struct AccountView: View {
             
             guard let data = response.data else { return }
             let user = try! JSONDecoder().decode(LoadAllData.self, from: data)
-            print(user.first_name)
-            print(user.last_name)
-            print(user.birth_date)
+//            print(user.first_name)
+//            print(user.last_name)
+//            print(user.birth_date)
     
             defaults.setValue(user.first_name, forKey: "first_name")
             defaults.setValue(user.last_name, forKey: "last_name")

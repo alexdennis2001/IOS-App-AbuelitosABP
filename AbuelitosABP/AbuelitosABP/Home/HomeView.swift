@@ -10,7 +10,7 @@ import Alamofire
 import SwiftyJSON
 
 struct HomeView: View {
-    @State private var first_name: String = UserDefaults.standard.string(forKey: "first_name")!
+    @State var first_name: String = UserDefaults.standard.string(forKey: "first_name") ?? "string"
     
     var body: some View {
         NavigationView {
@@ -207,7 +207,7 @@ struct HomeView: View {
             guard let data = response.data else { return }
             let user = try! JSONDecoder().decode(LoadAllData.self, from: data)
     
-            defaults.setValue(user.first_name, forKey: "first_name")
+            defaults.set(user.first_name, forKey: "first_name")
             
             
         }
