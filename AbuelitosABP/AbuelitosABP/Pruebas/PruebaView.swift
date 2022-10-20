@@ -224,9 +224,6 @@ struct PruebaView: View {
             "questions_answers": [question_answers, question_answers2, question_answers3, question_answers4, question_answers5]
         ]
         
-        
-        
-        
         let headers: HTTPHeaders = ["accept": "application/json",
                                     "Authorization": "Bearer " + token!,
                                     "Content-Type": "application/json"]

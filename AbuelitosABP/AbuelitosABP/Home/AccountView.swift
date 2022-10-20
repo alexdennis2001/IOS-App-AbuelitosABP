@@ -44,27 +44,35 @@ struct AccountView: View {
                         .frame(height: 200)
                     
                     
-                    VStack(alignment: .leading, spacing: 5){
+                    VStack(alignment: .center, spacing: 5){
                         Group{
                             Text("\(first_name) \(last_name)")
                                 .font(.system(size: 34, weight: .bold))
-                            Text("Fecha de Nacimiento: \(birth_date)")
+                            
+                            Text("Fecha de Nacimiento")
                                 .font(.system(size: 20, weight: .medium))
-                            Text("Decanato: \(decanato)")
+                            Text("\(birth_date)")
+                                .font(.system(size: 20, weight: .bold))
+                            Text("Decanato")
                                 .font(.system(size: 20, weight: .medium))
-                            Text("Parroquia: \(parroquia)")
+                            Text("\(decanato)")
+                                .font(.system(size: 20, weight: .bold))
+                            Text("Parroquia")
                                 .font(.system(size: 20, weight: .medium))
+                            Text("\(parroquia)")
+                                .font(.system(size: 20, weight: .bold))
+                                .fixedSize(horizontal: false, vertical: true)
                         }
                         
                     }
                     .background(
                         RoundedRectangle(cornerRadius: 30)
                             .fill(.white)
-                            .frame(width: 350, height: 200)
+                            .frame(width: 350, height: 250)
                     )
                     .frame(width: 350, height: 100)
-                    .padding(.top, 60)
-                    .padding(.bottom, 50)
+                    .padding(.top, 70)
+                    .padding(.bottom, 65)
                     
                     
                     Spacer()
@@ -133,7 +141,7 @@ struct AccountView: View {
                             .background(
                                 Capsule()
                                     .fill(.white)
-                                    .frame(width: 350, height: 100)
+                                    .frame(width: 350, height: 90)
                             )
                         }
                         
@@ -174,6 +182,14 @@ struct AccountView: View {
             defaults.setValue(user.birth_date, forKey: "birth_date")
             defaults.setValue(user.patient_info.decanato, forKey: "decanato")
             defaults.setValue(user.patient_info.parroquia, forKey: "parroquia")
+            
+            defaults.setValue(user.user.phone, forKey: "cel")
+            defaults.setValue(user.second_last_name, forKey: "second_last_name")
+            
+            defaults.setValue(user.patient_info.estado, forKey: "estado")
+            defaults.setValue(user.patient_info.municipio, forKey: "municipio")
+            defaults.setValue(user.patient_info.zona, forKey: "zona")
+            defaults.setValue(user.patient_info.direccion, forKey: "direccion")
             
             
         }

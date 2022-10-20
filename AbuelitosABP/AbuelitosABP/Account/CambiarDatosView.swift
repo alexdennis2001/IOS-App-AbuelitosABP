@@ -8,12 +8,11 @@
 import SwiftUI
 
 struct CambiarDatosView: View {
-    @State private var nombre: String = ""
-    @State private var apellidoP: String = ""
-    @State private var apellidoM: String = ""
-    @State private var cel: String = ""
-    @State private var password: String = ""
-    @State private var edad: String = ""
+    @State private var nombre: String = UserDefaults.standard.string(forKey: "first_name") ?? "string"
+    @State private var apellidoP: String = UserDefaults.standard.string(forKey: "last_name") ?? "string"
+    @State private var apellidoM: String = UserDefaults.standard.string(forKey: "second_last_name") ?? "string"
+    @State private var cel: String = UserDefaults.standard.string(forKey: "cel") ?? "string"
+    
     
     var body: some View {
         ZStack(alignment: .top){
@@ -23,7 +22,7 @@ struct CambiarDatosView: View {
             VStack{
                 Text("Datos de la cuenta")
                     .font(.system(size: 28, weight: .semibold))
-                    .padding(.bottom, 35)
+                    .padding(.bottom, 70)
                 VStack{
                     
                     Group{
@@ -79,17 +78,17 @@ struct CambiarDatosView: View {
                     }
                     
                     
-                    Group{
-                        HStack(alignment: .top){
-                            Text("Contraseña")
-                                .font(.system(size: 20, weight: .semibold))
-                            SecureField("Contraseña", text: $password)
-                                .font(.system(size: 20, weight: .light))
-                            
-                        }
-                        Divider()
-                            .padding(.bottom, 20)
-                    }
+//                    Group{
+//                        HStack(alignment: .top){
+//                            Text("Altura")
+//                                .font(.system(size: 20, weight: .semibold))
+//                            SecureField("Altura", text: $height)
+//                                .font(.system(size: 20, weight: .light))
+//
+//                        }
+//                        Divider()
+//                            .padding(.bottom, 20)
+//                    }
                 }
                 .background(
                     RoundedRectangle(cornerRadius: 30)

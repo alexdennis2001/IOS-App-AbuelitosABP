@@ -9,12 +9,12 @@ import SwiftUI
 
 struct CambiarFormularioView: View {
     
-    @State private var estado: String = ""
-    @State private var municipio: String = ""
-    @State private var zona: String = ""
-    @State private var decanato: String = ""
-    @State private var parroquia: String = ""
-    @State private var direccion: String = ""
+    @State private var estado: String = UserDefaults.standard.string(forKey: "estado") ?? "string"
+    @State private var municipio: String = UserDefaults.standard.string(forKey: "municipio") ?? "string"
+    @State private var zona: String = UserDefaults.standard.string(forKey: "zona") ?? "string"
+    @State private var decanato: String = UserDefaults.standard.string(forKey: "decanato") ?? "string"
+    @State private var parroquia: String = UserDefaults.standard.string(forKey: "parroquia") ?? "string"
+    @State private var direccion: String = UserDefaults.standard.string(forKey: "direccion") ?? "string"
     
     var body: some View {
         ZStack(alignment: .top){
@@ -83,9 +83,9 @@ struct CambiarFormularioView: View {
                         HStack(alignment: .top){
                             Text("Parroquia/Capilla")
                                 .font(.system(size: 20, weight: .semibold))
-                            SecureField("Parroquia/Capilla", text: $parroquia)
+                            TextField("Parroquia/Capilla", text: $parroquia)
                                 .font(.system(size: 20, weight: .light))
-                            
+                                
                         }
                         Divider()
                             .padding(.bottom, 20)
@@ -95,7 +95,7 @@ struct CambiarFormularioView: View {
                         HStack(alignment: .top){
                             Text("Dirección")
                                 .font(.system(size: 20, weight: .semibold))
-                            SecureField("Dirección", text: $direccion)
+                            TextField("Dirección", text: $direccion)
                                 .font(.system(size: 20, weight: .light))
                             
                         }

@@ -38,7 +38,7 @@ struct PruebasView: View {
                     Image("logo_abuelitos")
                         .scaledToFit()
                         .padding(.bottom, 5)
-                        .offset(x: 10,y: 7)
+                        .offset(x: 10,y: 13)
                     
                     HStack{
                         Text("Pruebas de Tamizaje")
@@ -61,6 +61,7 @@ struct PruebasView: View {
                                 .fill(Color("VerdePrueba"))
                                 .frame(width: 110, height: 50)
                         )
+                        .frame(width: 100, height: 50)
 
                         
                     }
