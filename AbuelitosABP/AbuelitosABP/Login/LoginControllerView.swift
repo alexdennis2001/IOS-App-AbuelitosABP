@@ -22,6 +22,8 @@ struct LoginControllerView: View {
                 CongratulationsView()
             case .keepUp:
                 KeepItUpView()
+            case .resultados:
+                ResultadosView()
             case .formularioPersonal:
                 FormularioDatosPersonalView()
             case .formularioUbicacion:

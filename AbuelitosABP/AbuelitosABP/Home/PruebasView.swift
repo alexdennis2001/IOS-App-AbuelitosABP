@@ -26,6 +26,7 @@ extension View {
 }
 
 struct PruebasView: View {
+    @AppStorage("Page") var currentPage: Page?
     @ObservedObject var pruebaModel: PruebaModel
     
     var body: some View {
@@ -39,9 +40,28 @@ struct PruebasView: View {
                         .padding(.bottom, 5)
                         .offset(x: 10,y: 7)
                     
-                    Text("Pruebas de Tamizaje")
-                        .font(.system(size: 28, weight: .semibold))
-                        .padding(.bottom, 5)
+                    HStack{
+                        Text("Pruebas de Tamizaje")
+                            .font(.system(size: 28, weight: .semibold))
+                            .padding(.bottom, 5)
+                        Button {
+                            currentPage = .resultados
+                        } label: {
+                            
+                            ZStack{
+                                Text("Resultados")
+                                    .font(.system(size: 16, weight: .semibold))
+                                
+                            }
+                            .padding()
+                            .foregroundColor(.black)
+                            .background(
+                                Capsule()
+                                    .fill(Color("VerdePrueba"))
+                                    .frame(width: 100, height: 40)
+                            )
+                        }
+                    }
                     
                     
                     

@@ -24,8 +24,8 @@ struct HomeView: View {
                             .scaledToFit()
                             .padding(.bottom, 0)
                         Text("Bienvenido, \(first_name)!")
-                            .font(.system(size: 24, weight: .medium))
-                            .padding(.bottom, 1)
+                                .font(.system(size: 24, weight: .medium))
+                                .padding(.bottom, 1)
                     }
                     .padding(.leading,20)
                     
