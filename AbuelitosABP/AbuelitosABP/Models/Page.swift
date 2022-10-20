@@ -12,6 +12,7 @@ enum Page: String {
     case menu = "menu"
     case congrats = "congrats"
     case keepUp = "keepUp"
+    case resultados = "resultados"
     case formularioPersonal = "formularioPersonal"
     case formularioUbicacion = "formularioUbicacion"
     case recuperarContrasena = "recuperarContrasena"
