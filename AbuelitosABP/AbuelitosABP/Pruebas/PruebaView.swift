@@ -100,6 +100,7 @@ struct PruebaView: View {
                                     
                                     
                                     if(prueba.id == 1){
+                                        postMethod(test_id: idPrueba!, score: prueba.scoreFinal, questions_answers: pregRespuesta)
                                         scorePrueba1 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     else if(prueba.id == 2){
@@ -118,7 +119,6 @@ struct PruebaView: View {
                                         scorePrueba6 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
                                     
-                                    postMethod(test_id: idPrueba!, score: prueba.scoreFinal, questions_answers: pregRespuesta)
                                     
                                     if(prueba.orden == 1){
                                         if(rango >= aprovado){
