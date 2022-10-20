@@ -82,7 +82,7 @@ struct PruebaView: View {
                                 score += prueba.preg_resp[questionNumber].respuesta[respuesta].score
                                 prueba.scoreFinal = score
                                 if prueba.preg_resp.count > questionNumber + 1 {
-                                    pregRespuesta.append(TestPreguntaRespuesta(id: prueba.preg_resp[questionNumber].id, answer: prueba.preg_resp[questionNumber].respuesta[respuesta].score))
+                                    pregRespuesta.append(TestPreguntaRespuesta(question_id: prueba.preg_resp[questionNumber].id, answer: prueba.preg_resp[questionNumber].respuesta[respuesta].score))
                                     questionNumber += 1
                                 } else {
                                     aprovado = Double(prueba.rangosScore[0].count) / 2.0
@@ -117,6 +117,8 @@ struct PruebaView: View {
                                     else if(prueba.id == 6){
                                         scorePrueba6 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
+                                    
+                                    postMethod(test_id: idPrueba!, score: prueba.scoreFinal, questions_answers: pregRespuesta)
                                     
                                     if(prueba.orden == 1){
                                         if(rango >= aprovado){
@@ -179,35 +181,78 @@ struct PruebaView: View {
         
         let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
         
+        let question_answers: Parameters = [
+            "question_id": questions_answers[0].question_id,
+            "answer": questions_answers[0].answer
+        ]
+        let question_answers2: Parameters = [
+            "question_id": questions_answers[1].question_id,
+            "answer": questions_answers[1].answer
+        ]
+        let question_answers3: Parameters = [
+            "question_id": questions_answers[2].question_id,
+            "answer": questions_answers[2].answer
+        ]
+        let question_answers4: Parameters = [
+            "question_id": questions_answers[3].question_id,
+            "answer": questions_answers[3].answer
+        ]
+        let question_answers5: Parameters = [
+            "question_id": questions_answers[4].question_id,
+            "answer": questions_answers[4].answer
+        ]
+//        let question_answers6: Parameters = [
+//            "question_id": questions_answers[5].question_id,
+//            "answer": questions_answers[5].answer
+//        ]
+//        let question_answers7: Parameters = [
+//            "question_id": questions_answers[6].question_id,
+//            "answer": questions_answers[6].answer
+//        ]
+//        let question_answers8: Parameters = [
+//            "question_id": questions_answers[7].question_id,
+//            "answer": questions_answers[7].answer
+//        ]
+//        let question_answers9: Parameters = [
+//            "question_id": questions_answers[8].question_id,
+//            "answer": questions_answers[8].answer
+//        ]
+        
         let params: Parameters = [
             "test_id": test_id,
             "score": score,
-            "questions_answers": questions_answers
+            "questions_answers": [question_answers, question_answers2, question_answers3, question_answers4, question_answers5]
         ]
+        
+        
+        
         
         let headers: HTTPHeaders = ["accept": "application/json",
                                     "Authorization": "Bearer " + token!,
                                     "Content-Type": "application/json"]
         
-        AF.request("http://172.104.198.169:8000/api/medical-test/app", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 299).responseData { response in
+        AF.request("http://172.104.198.169:8000/api/medical-test/app", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).responseData { response in
             switch response.result {
             case .success(let info):
+                let json = JSON(info)
+                debugPrint(json)
                 do {
-                    
-                    guard let patientInfo = try? JSONDecoder().decode(PatientInfo.self, from: info) else {
+
+                    guard let pruebaInfo = try? JSONDecoder().decode(PruebasScore.self, from: info) else {
                         print("Error: Could not get JSON")
                         return
                     }
-                    
+
                     //                        print(registerResponse)
-                    
-                    guard let firstName = patientInfo.first_name else {
+
+                    guard let pruebaScore = pruebaInfo.score else {
                         print("Error: Could not get first name")
                         return
                     }
-                    
-                    print(firstName)
-                    
+
+                    print(pruebaScore)
+                    print("hola")
+
                 }
                 
             case .failure(let error):
@@ -215,6 +260,8 @@ struct PruebaView: View {
             }
         }
     }
+    
+    
     
     
 }

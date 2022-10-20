@@ -61,8 +61,6 @@
 		8A16625C28FC7C1300341DAF /* Respuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16625B28FC7C1300341DAF /* Respuesta.swift */; };
 		8A166262290067EE00341DAF /* ResultadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A166261290067EE00341DAF /* ResultadosView.swift */; };
 		8A1662662900DCF000341DAF /* PruebasScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1662652900DCF000341DAF /* PruebasScore.swift */; };
-		8A1662682900E00C00341DAF /* PruebasScoreModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1662672900E00C00341DAF /* PruebasScoreModel.swift */; };
-		8A16626A2900E3DD00341DAF /* Preguntas_Respuestas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1662692900E3DD00341DAF /* Preguntas_Respuestas.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -119,8 +117,6 @@
 		8A16625B28FC7C1300341DAF /* Respuesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respuesta.swift; sourceTree = "<group>"; };
 		8A166261290067EE00341DAF /* ResultadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosView.swift; sourceTree = "<group>"; };
 		8A1662652900DCF000341DAF /* PruebasScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebasScore.swift; sourceTree = "<group>"; };
-		8A1662672900E00C00341DAF /* PruebasScoreModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PruebasScoreModel.swift; sourceTree = "<group>"; };
-		8A1662692900E3DD00341DAF /* Preguntas_Respuestas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preguntas_Respuestas.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -203,8 +199,6 @@
 				1BE8CF5328FF430500BC3E22 /* RegistroViewModel.swift */,
 				1BE8CF5528FFA2B500BC3E22 /* PatientInfoModel.swift */,
 				8A1662652900DCF000341DAF /* PruebasScore.swift */,
-				8A1662692900E3DD00341DAF /* Preguntas_Respuestas.swift */,
-				8A1662672900E00C00341DAF /* PruebasScoreModel.swift */,
 				1BE8CF5728FFBCA400BC3E22 /* PatientInfo2Model.swift */,
 				1BE8CF5B2900588200BC3E22 /* LoadAllData.swift */,
 				1BE8CF612900E3F600BC3E22 /* TestPreguntaRespuesta.swift */,
@@ -402,7 +396,6 @@
 				1B07624928DE129400E6425C /* Page.swift in Sources */,
 				1BE8CF4628FE143B00BC3E22 /* LoginViewModel.swift in Sources */,
 				1B1AFD0528D2AB1500193CCE /* Timer-ViewModel.swift in Sources */,
-				8A16626A2900E3DD00341DAF /* Preguntas_Respuestas.swift in Sources */,
 				1B200FD228EE6157001CC1CF /* RecuperarContrasena2View.swift in Sources */,
 				1B07625328DE1FA100E6425C /* ActCognitivaView.swift in Sources */,
 				1B1AFCFB28CEA43B00193CCE /* MenuView.swift in Sources */,
@@ -410,7 +403,6 @@
 				1BE8CF5628FFA2B500BC3E22 /* PatientInfoModel.swift in Sources */,
 				1B4E9E9D28E51C52003A4EC8 /* PruebaModel.swift in Sources */,
 				1B1AFCF728CD256F00193CCE /* RecuperarContrasenaView.swift in Sources */,
-				8A1662682900E00C00341DAF /* PruebasScoreModel.swift in Sources */,
 				1B1AFCFF28CFB61600193CCE /* AccountView.swift in Sources */,
 				1B700B7728F8F2BA000BC1FA /* CoreDataProperties.swift in Sources */,
 				1B1AFD0328D24A2800193CCE /* ActFisicaView.swift in Sources */,

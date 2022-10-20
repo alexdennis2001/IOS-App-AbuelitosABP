@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct TestPreguntaRespuesta: Identifiable {
-    var id: Int
+struct TestPreguntaRespuesta: Codable {
+    var question_id: Int
     var answer: Double
 }

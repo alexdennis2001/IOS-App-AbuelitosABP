@@ -9,7 +9,7 @@ import SwiftUI
 
 struct PruebasScore: Codable {
     let test_id: Int
-    let score: Double
+    let score: Double?
     let questions_answers: [Questions_Answers]
     
     struct Questions_Answers: Codable{

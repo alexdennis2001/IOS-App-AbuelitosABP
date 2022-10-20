@@ -94,7 +94,7 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
                                 Text("ÍNDICE DE KATZ")
-                                    .card(backgroundColor: Color("RojoPrueba"))
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                             
                             NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
@@ -129,7 +129,7 @@ struct PruebasView: View {
                                 .font(.system(size: 26, weight: .semibold))
                             NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[3])) {
                                 Text("ESCALA SARC-F")
-                                    .card(backgroundColor: Color("RojoPrueba"))
+                                    .card(backgroundColor: Color("AmarilloPrueba"))
                             }
                             
                             
