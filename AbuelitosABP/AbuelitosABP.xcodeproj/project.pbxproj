@@ -56,6 +56,7 @@
 		1BE8CF5628FFA2B500BC3E22 /* PatientInfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8CF5528FFA2B500BC3E22 /* PatientInfoModel.swift */; };
 		1BE8CF5828FFBCA400BC3E22 /* PatientInfo2Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8CF5728FFBCA400BC3E22 /* PatientInfo2Model.swift */; };
 		1BE8CF5C2900588200BC3E22 /* LoadAllData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8CF5B2900588200BC3E22 /* LoadAllData.swift */; };
+		1BE8CF622900E3F600BC3E22 /* TestPreguntaRespuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BE8CF612900E3F600BC3E22 /* TestPreguntaRespuesta.swift */; };
 		1BF3F76E28EB570F009DABCB /* CongratulationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */; };
 		8A16625C28FC7C1300341DAF /* Respuesta.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A16625B28FC7C1300341DAF /* Respuesta.swift */; };
 		8A166262290067EE00341DAF /* ResultadosView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A166261290067EE00341DAF /* ResultadosView.swift */; };
@@ -110,6 +111,7 @@
 		1BE8CF5528FFA2B500BC3E22 /* PatientInfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfoModel.swift; sourceTree = "<group>"; };
 		1BE8CF5728FFBCA400BC3E22 /* PatientInfo2Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatientInfo2Model.swift; sourceTree = "<group>"; };
 		1BE8CF5B2900588200BC3E22 /* LoadAllData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadAllData.swift; sourceTree = "<group>"; };
+		1BE8CF612900E3F600BC3E22 /* TestPreguntaRespuesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPreguntaRespuesta.swift; sourceTree = "<group>"; };
 		1BF3F76D28EB570F009DABCB /* CongratulationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratulationsView.swift; sourceTree = "<group>"; };
 		8A16625B28FC7C1300341DAF /* Respuesta.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Respuesta.swift; sourceTree = "<group>"; };
 		8A166261290067EE00341DAF /* ResultadosView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultadosView.swift; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				1BE8CF5528FFA2B500BC3E22 /* PatientInfoModel.swift */,
 				1BE8CF5728FFBCA400BC3E22 /* PatientInfo2Model.swift */,
 				1BE8CF5B2900588200BC3E22 /* LoadAllData.swift */,
+				1BE8CF612900E3F600BC3E22 /* TestPreguntaRespuesta.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -373,6 +376,7 @@
 				1BE8CF5128FE206C00BC3E22 /* Constants.swift in Sources */,
 				1B700B7A28F8F613000BC1FA /* JournalListView.swift in Sources */,
 				1B07625528DEDA1800E6425C /* ActSocialView.swift in Sources */,
+				1BE8CF622900E3F600BC3E22 /* TestPreguntaRespuesta.swift in Sources */,
 				1B700B8628FB2E82000BC1FA /* FormularioDatosPersonalView.swift in Sources */,
 				8A166262290067EE00341DAF /* ResultadosView.swift in Sources */,
 				1B21A59728CA59240060B598 /* Persistence.swift in Sources */,

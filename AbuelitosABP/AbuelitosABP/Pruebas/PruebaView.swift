@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Alamofire
+import SwiftyJSON
 
 struct PruebaView: View {
     @AppStorage("IdPrueba") var idPrueba: Int?
@@ -23,6 +25,8 @@ struct PruebaView: View {
     @AppStorage("Page") var currentPage: Page?
     var prueba: Prueba
     @State var score = 0.0
+    
+    @State var pregRespuesta = [TestPreguntaRespuesta]()
     
     var body: some View {
         
@@ -78,6 +82,7 @@ struct PruebaView: View {
                                 score += prueba.preg_resp[questionNumber].respuesta[respuesta].score
                                 prueba.scoreFinal = score
                                 if prueba.preg_resp.count > questionNumber + 1 {
+                                    pregRespuesta.append(TestPreguntaRespuesta(id: prueba.preg_resp[questionNumber].id, answer: prueba.preg_resp[questionNumber].respuesta[respuesta].score))
                                     questionNumber += 1
                                 } else {
                                     aprovado = Double(prueba.rangosScore[0].count) / 2.0
@@ -91,6 +96,9 @@ struct PruebaView: View {
                                         }
                                     }
                                     idPrueba = prueba.id
+                                    
+                                    
+                                    
                                     if(prueba.id == 1){
                                         scorePrueba1 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
@@ -109,6 +117,7 @@ struct PruebaView: View {
                                     else if(prueba.id == 6){
                                         scorePrueba6 = Double(round(10 * prueba.scoreFinal)/10)
                                     }
+                                    
                                     if(prueba.orden == 1){
                                         if(rango >= aprovado){
                                             currentPage = .congrats
@@ -119,6 +128,7 @@ struct PruebaView: View {
                                     }
                                     if(prueba.orden == 0){
                                         if(rango <= aprovado){
+//                                            
                                             currentPage = .congrats
                                         }
                                         else{
@@ -162,6 +172,47 @@ struct PruebaView: View {
             
             .padding(.bottom, 70)
             
+        }
+    }
+    
+    func postMethod(test_id: Int, score: Double, questions_answers: [TestPreguntaRespuesta]) {
+        
+        let token = UserDefaults.standard.string(forKey: "jsonwebtoken")
+        
+        let params: Parameters = [
+            "test_id": test_id,
+            "score": score,
+            "questions_answers": questions_answers
+        ]
+        
+        let headers: HTTPHeaders = ["accept": "application/json",
+                                    "Authorization": "Bearer " + token!,
+                                    "Content-Type": "application/json"]
+        
+        AF.request("http://172.104.198.169:8000/api/medical-test/app", method: .post, parameters: params, encoding: JSONEncoding.default, headers: headers).validate(statusCode: 200 ..< 299).responseData { response in
+            switch response.result {
+            case .success(let info):
+                do {
+                    
+                    guard let patientInfo = try? JSONDecoder().decode(PatientInfo.self, from: info) else {
+                        print("Error: Could not get JSON")
+                        return
+                    }
+                    
+                    //                        print(registerResponse)
+                    
+                    guard let firstName = patientInfo.first_name else {
+                        print("Error: Could not get first name")
+                        return
+                    }
+                    
+                    print(firstName)
+                    
+                }
+                
+            case .failure(let error):
+                print(error)
+            }
         }
     }
     
