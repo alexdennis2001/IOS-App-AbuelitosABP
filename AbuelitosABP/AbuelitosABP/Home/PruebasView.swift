@@ -44,48 +44,50 @@ struct PruebasView: View {
                         Text("Pruebas de Tamizaje")
                             .font(.system(size: 28, weight: .semibold))
                             .padding(.bottom, 5)
-                        Button {
-                            currentPage = .resultados
-                        } label: {
-                            
-                            ZStack{
+                            .padding(.horizontal, 5)
+                        
+                        VStack{
+                            NavigationLink {
+                                ResultadosView()
+                            } label: {
                                 Text("Resultados")
-                                    .font(.system(size: 16, weight: .semibold))
-                                
+                                    .font(.system(size: 18, weight: .semibold))
+                                    .foregroundColor(.black)
                             }
-                            .padding()
-                            .foregroundColor(.black)
-                            .background(
-                                Capsule()
-                                    .fill(Color("VerdePrueba"))
-                                    .frame(width: 100, height: 40)
-                            )
+                            
                         }
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color("VerdePrueba"))
+                                .frame(width: 110, height: 50)
+                        )
+
+                        
                     }
                     
                     
                     
                     ScrollView(showsIndicators: false) {
                         
-//                        VStack(alignment: .leading, spacing: 20) {
-//                            Text("Cognitiva")
-//                                .font(.system(size: 26, weight: .semibold))
-//                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
-//                                Text("TIMED UP AND GO")
-//                                    .card(backgroundColor: Color("VerdePrueba"))
-//                            }
-//
-//                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
-//                                Text("MINI MENTAL STATE EXAMINATION DE FOLSTEIN")
-//                                    .card(backgroundColor: Color("AmarilloPrueba"))
-//                            }
-//                        }
-//                        .frame(width: 380, height: 300)
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 40)
-//                                .fill(.white)
-//                        )
-//                        .padding(.bottom, 5)
+                        //                        VStack(alignment: .leading, spacing: 20) {
+                        //                            Text("Cognitiva")
+                        //                                .font(.system(size: 26, weight: .semibold))
+                        //                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[0])) {
+                        //                                Text("TIMED UP AND GO")
+                        //                                    .card(backgroundColor: Color("VerdePrueba"))
+                        //                            }
+                        //
+                        //                            NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
+                        //                                Text("MINI MENTAL STATE EXAMINATION DE FOLSTEIN")
+                        //                                    .card(backgroundColor: Color("AmarilloPrueba"))
+                        //                            }
+                        //                        }
+                        //                        .frame(width: 380, height: 300)
+                        //                        .background(
+                        //                            RoundedRectangle(cornerRadius: 40)
+                        //                                .fill(.white)
+                        //                        )
+                        //                        .padding(.bottom, 5)
                         
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Funcionalidad")
@@ -94,7 +96,7 @@ struct PruebasView: View {
                                 Text("ÍNDICE DE KATZ")
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
-
+                            
                             NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[1])) {
                                 Text("ÍNDICE DE LAWTON & BRODY")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
@@ -106,7 +108,7 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-
+                        
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Afectivo - Calidad de Vida")
                                 .font(.system(size: 26, weight: .semibold))
@@ -121,7 +123,7 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-
+                        
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Desempeño Físico")
                                 .font(.system(size: 26, weight: .semibold))
@@ -130,12 +132,12 @@ struct PruebasView: View {
                                     .card(backgroundColor: Color("RojoPrueba"))
                             }
                             
-
-//                            NavigationLink(destination: PruebaView()) {
-//                                Text("SHORT PHYSICAL PERFORMANCE BATTERY (SPPB)")
-//                                    .card(backgroundColor: Color("AmarilloPrueba"))
-//                            }
-
+                            
+                            //                            NavigationLink(destination: PruebaView()) {
+                            //                                Text("SHORT PHYSICAL PERFORMANCE BATTERY (SPPB)")
+                            //                                    .card(backgroundColor: Color("AmarilloPrueba"))
+                            //                            }
+                            
                             NavigationLink(destination: PruebaView(prueba: pruebaModel.pruebas[4])) {
                                 Text("CUESTIONARIO FRAIL PARA DETECCIÓN DE FRAGILIDAD")
                                     .card(backgroundColor: Color("AmarilloPrueba"))
@@ -147,7 +149,7 @@ struct PruebasView: View {
                                 .fill(.white)
                         )
                         .padding(.bottom, 5)
-
+                        
                         VStack(alignment: .leading, spacing: 20) {
                             Text("Riesgo Social")
                                 .font(.system(size: 26, weight: .semibold))
@@ -165,9 +167,9 @@ struct PruebasView: View {
                         
                     }
                     .frame(width: 380, height: 670)
-                
+                    
                 }.offset(x: 0, y: -50)
-    
+                
                 
             }
             
