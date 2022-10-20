@@ -13,7 +13,6 @@ struct RegistroView: View {
     @State private var confPassword: String = ""
     @State private var showPassword = false
     @State private var registro = RegistroViewModel()
-    @State private var errorRegistro = false
     
     @AppStorage("Page") var currentPage: Page?
     
@@ -98,20 +97,12 @@ struct RegistroView: View {
                             .opacity(0.5)
                         }
                         else {
-                            if errorRegistro {
-                                Text("El numero ya se encuentra registrado")
-                                    .foregroundColor(.red)
-                                    .bold()
-                            }
                             
                             Button{
                                 registro.postMethod(username: cel, password: confPassword)
                                 if registro.isAuthenticated {
                                     currentPage = .formularioPersonal
-                                } else {
-                                    errorRegistro = true
                                 }
-                                
                                 
                             } label: {
                                 Text("Crear Cuenta")
